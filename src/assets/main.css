@@ -1,0 +1,181 @@
+@import "tailwindcss";
+
+/* ============================================================
+   mie — DESIGN TOKENS (LIGHT)
+   Παλέτα από το logo: ζεστό κρεμ + ink + κοραλί accent.
+   ============================================================ */
+@theme {
+  --color-bg: #f5f4f2;          /* brand cream */
+  --color-bg-soft: #eceae4;
+  --color-surface: #fcfbf9;
+  --color-ink: #1a1815;         /* warm near-black */
+  --color-ink-soft: #6e6a62;
+  --color-muted: #c7c2b8;
+  --color-line: #e2ded5;
+  --color-accent: #b5715f;      /* κοραλί (logo) */
+  --color-accent-deep: #9e5e4d;
+
+  --font-sans: "Commissioner", system-ui, sans-serif;
+  --font-display: "Cormorant", Georgia, serif;
+}
+
+/* ============================================================
+   DARK TOKENS — ίδια ονόματα.
+   ============================================================ */
+html.dark {
+  --color-bg: #16140f;
+  --color-bg-soft: #1e1b15;
+  --color-surface: #211e17;
+  --color-ink: #efeae0;
+  --color-ink-soft: #a39c8e;
+  --color-muted: #4a4438;
+  --color-line: #2e2a20;
+  --color-accent: #c98978;      /* lightened κοραλί */
+  --color-accent-deep: #d69e8e;
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+@layer base {
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-weight: 360;
+    -webkit-font-smoothing: antialiased;
+    transition: background-color .4s ease, color .4s ease;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    line-height: 1.04;
+    letter-spacing: -0.01em;
+  }
+  ::selection { background: var(--color-accent); color: #fff; }
+  /* logo: η dark εκδοχή φαίνεται μόνο σε dark mode */
+  .logo-dark { display: none; }
+  html.dark .logo-light { display: none; }
+  html.dark .logo-dark { display: block; }
+}
+
+/* ============================================================
+   UTILITIES — τυπογραφική υπογραφή
+   ============================================================ */
+@layer components {
+  .label {
+    font-family: var(--font-sans);
+    font-size: .72rem;
+    font-weight: 600;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+  }
+  .eyebrow {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    color: var(--color-ink-soft);
+  }
+
+  /* SIGNATURE: κοραλί χειρόγραφη υπογράμμιση (από το logo) */
+  .brush {
+    position: relative;
+    display: inline-block;
+  }
+  .brush::after {
+    content: "";
+    position: absolute;
+    left: -6px; right: -6px;
+    bottom: -7px;
+    height: 11px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12' preserveAspectRatio='none'%3E%3Cpath d='M3 7 C40 2 70 10 110 6 S180 3 197 6' stroke='%23b5715f' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  html.dark .brush::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12' preserveAspectRatio='none'%3E%3Cpath d='M3 7 C40 2 70 10 110 6 S180 3 197 6' stroke='%23c98978' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  }
+
+  .link-cta {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 3px;
+    color: currentColor;
+  }
+  .link-cta::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: 0;
+    height: 1px; width: 100%;
+    background: currentColor;
+    transform: scaleX(1);
+    transform-origin: right;
+    transition: transform .45s cubic-bezier(.16,1,.3,1);
+  }
+  .link-cta:hover::after { transform: scaleX(0); transform-origin: left; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .55rem;
+    padding: .9rem 2.1rem;
+    border: 1px solid transparent;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: .75rem;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    transition: all .3s ease;
+    cursor: pointer;
+  }
+  .btn-primary {
+    background: transparent;
+    color: var(--color-ink);
+    border-color: var(--color-ink);
+  }
+  .btn-primary:hover { background: var(--color-ink); color: var(--color-bg); }
+  .btn-solid {
+    background: var(--color-accent-deep);
+    color: #fff;
+    border-color: var(--color-accent-deep);
+  }
+  .btn-solid:hover { opacity: .9; }
+}
+
+/* ============================================================
+   PAGE TRANSITIONS
+   ============================================================ */
+.page-enter-active { transition: opacity .7s ease-out, transform .7s cubic-bezier(.16,1,.3,1); }
+.page-leave-active { transition: opacity .3s ease, transform .3s ease; }
+.page-enter-from { opacity: 0; transform: translateY(14px); }
+.page-leave-to { opacity: 0; transform: translateY(-8px); }
+
+@media (prefers-reduced-motion: reduce) {
+  .page-enter-active, .page-leave-active { transition: none; }
+  .page-enter-from, .page-leave-to { opacity: 1; transform: none; }
+}
+
+/* ============================================================
+   THEME TOGGLE tooltip
+   ============================================================ */
+.tl-toggle::after {
+  content: attr(data-tip);
+  position: absolute;
+  top: calc(100% + 8px); left: 50%;
+  transform: translateX(-50%) translateY(-4px);
+  white-space: nowrap;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: .85rem;
+  color: var(--color-ink-soft);
+  background: var(--color-bg);
+  padding: 2px 8px;
+  z-index: 60; opacity: 0; pointer-events: none;
+  transition: opacity .3s ease, transform .3s ease;
+}
+.tl-toggle:hover::after { opacity: 1; transform: translateX(-50%) translateY(0); }
+@media (min-width: 768px) {
+  .tl-toggle::after { top: 50%; left: calc(100% + 10px); transform: translateY(-50%) translateX(-4px); }
+  .tl-toggle:hover::after { transform: translateY(-50%) translateX(0); }
+}

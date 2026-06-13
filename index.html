@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="el">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#f5f4f2" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#141310" media="(prefers-color-scheme: dark)" />
+
+    <!-- No-flash theme -->
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme')
+          if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+          if (t === 'dark') document.documentElement.classList.add('dark')
+        } catch (e) {}
+      })()
+    </script>
+
+    <!-- Fonts: Cormorant (display) + Commissioner (sans), με Greek subset -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Commissioner:wght@300;400;500;600&family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap&subset=greek,latin"
+      rel="stylesheet"
+    />
+
+    <!-- SEO defaults (per-page overrides via useHead) -->
+    <title>mie — Μαρίνα Δούκα · εικαστικά</title>
+    <meta name="description" content="mie — εικαστικό εργαστήριο της Μαρίνας Δούκα στην Αθήνα. Ζωγραφική, κεραμική, χαρτί και υφαντά." />
+    <meta property="og:title" content="mie — Μαρίνα Δούκα" />
+    <meta property="og:description" content="Επιλεγμένα έργα & συλλογές." />
+    <meta property="og:image" content="https://mie.example/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://mie.example/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="mie — Μαρίνα Δούκα" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://mie.example/og-image.png" />
+
+    <!-- Google Analytics (βάλε το ID στο config + ξεσχόλιασε εδώ) -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag(){dataLayer.push(arguments)}
+      if (!['localhost','127.0.0.1'].includes(location.hostname)) {
+        gtag('js', new Date())
+        gtag('config', 'G-XXXXXXXXXX', { send_page_view: false })
+      }
+    </script>
+    -->
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
