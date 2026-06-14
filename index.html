@@ -1,29 +1,33 @@
 <!doctype html>
 <html lang="el">
-  <head>
+<head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#f5f4f2" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#141310" media="(prefers-color-scheme: dark)" />
 
     <!-- No-flash theme -->
     <script>
-      (function () {
-        try {
-          var t = localStorage.getItem('theme')
-          if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-          if (t === 'dark') document.documentElement.classList.add('dark')
-        } catch (e) {}
-      })()
+        (function () {
+            try {
+                var t = localStorage.getItem('theme')
+                if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+                if (t === 'dark') document.documentElement.classList.add('dark')
+            } catch (e) {}
+        })()
     </script>
 
     <!-- Fonts: Cormorant (display) + Commissioner (sans), με Greek subset -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Commissioner:wght@300;400;500;600&family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap&subset=greek,latin"
-      rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Commissioner:wght@300;400;500;600&family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap&subset=greek,latin"
+            rel="stylesheet"
     />
 
     <!-- SEO defaults (per-page overrides via useHead) -->
@@ -52,9 +56,9 @@
       }
     </script>
     -->
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+</head>
+<body>
+<div id="app"></div>
+<script type="module" src="/src/main.js"></script>
+</body>
 </html>

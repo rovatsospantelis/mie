@@ -10,7 +10,7 @@ const props = defineProps({
       { to: '/', label: 'Αρχική', icon: Home },
       { to: '/works', label: 'Έργα', icon: LayoutGrid },
       { to: '/about', label: 'Σχετικά', icon: User },
-      { to: '/contact', label: 'Επαφή', icon: Mail },
+      { to: '/contact', label: 'Επικοινωνία', icon: Mail },
     ],
   },
 })

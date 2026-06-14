@@ -10,14 +10,28 @@
 // --- Hero carousel (αρχική) ---
 export const heroSlides = [
   {
-    image: '/about/studio.jpg',
-    eyebrow: 'mie · Μαρίνα Δούκα',
+    image: '/works/pure/pure-10.png',
+    eyebrow: 'Pure art',
     title: 'Χρώμα & φόρμα',
     text: 'Art pieces και print pieces με χαρακτήρα και προσωπική ταυτότητα.',
     cta: { label: 'Δείτε τα έργα', to: '/works' },
   },
   {
     image: '/works/pure/pure-02.jpg',
+    eyebrow: 'Pure art',
+    title: 'Πίνακες',
+    text: 'Αφηρημένες συνθέσεις σε χρώμα και υφή.',
+    cta: { label: 'Δείτε τους πίνακες', to: { path: '/works', query: { c: 'Pure art' } } },
+  },
+  {
+    image: '/works/pure/pure-04.jpg',
+    eyebrow: 'Pure art',
+    title: 'Πίνακες',
+    text: 'Αφηρημένες συνθέσεις σε χρώμα και υφή.',
+    cta: { label: 'Δείτε τους πίνακες', to: { path: '/works', query: { c: 'Pure art' } } },
+  },
+  {
+    image: '/works/pure/pure-11.png',
     eyebrow: 'Pure art',
     title: 'Πίνακες',
     text: 'Αφηρημένες συνθέσεις σε χρώμα και υφή.',
@@ -91,6 +105,12 @@ export const works = [
   { category: 'Pure art', image: '/works/pure/pure-04.jpg' },
   { category: 'Pure art', image: '/works/pure/pure-05.jpg' },
   { category: 'Pure art', image: '/works/pure/pure-06.jpg' },
+  { category: 'Pure art', image: '/works/pure/pure-07.png' },
+  { category: 'Pure art', image: '/works/pure/pure-08.png' },
+  { category: 'Pure art', image: '/works/pure/pure-09.png' },
+  { category: 'Pure art', image: '/works/pure/pure-10.png' },
+  { category: 'Pure art', image: '/works/pure/pure-11.png' },
+  { category: 'Pure art', image: '/works/pure/pure-12.png' }
 ]
 
 // --- Editorial 3-up ---
