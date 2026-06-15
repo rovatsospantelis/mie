@@ -18,19 +18,19 @@ export const site = {
 
   // --- Επικοινωνία ---
   contact: {
-    // phone: '+30 21 0000 0000',
-    // phoneRaw: '+302100000000',
+    phone: '+30 21 0000 0000',
+    phoneRaw: '+302100000000',
     mobile: '+30 690 000 0000',
     mobileRaw: '+306900000000',
     email: 'hello@mie.example',
-    // address: {
-    //   street: 'Ηρακλειδών 1',
-    //   area: 'Θησείο, Αθήνα',
-    //   postalCode: '11851',
-    //   country: 'GR',
-    //   lat: 37.9765,
-    //   lng: 23.7185,
-    // },
+    address: {
+      street: 'Ηρακλειδών 1',
+      area: 'Θησείο, Αθήνα',
+      postalCode: '11851',
+      country: 'GR',
+      lat: 37.9765,
+      lng: 23.7185,
+    }
   },
 
   // --- Social (άσε κενό '' για να μην εμφανίζεται) ---
