@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { X, ChevronLeft, ChevronRight } from 'lucide-vue-next'
 import { site } from '@/config/site'
@@ -15,11 +15,31 @@ const route = useRoute()
 const router = useRouter()
 
 const categories = ['Όλα', ...collections.map((c) => c.category)]
-const active = ref(route.query.c && categories.includes(route.query.c) ? route.query.c : 'Όλα')
+
+function getCategoryFromRoute() {
+  const c = Array.isArray(route.query.c) ? route.query.c[0] : route.query.c
+
+  return c && categories.includes(c)
+      ? c
+      : 'Όλα'
+}
+
+const active = ref(getCategoryFromRoute())
+
+watch(
+    () => route.query.c,
+    () => {
+      active.value = getCategoryFromRoute()
+    }
+)
 
 function setCategory(cat) {
   active.value = cat
-  router.replace({ query: cat === 'Όλα' ? {} : { c: cat } })
+
+  router.replace({
+    path: '/works',
+    query: cat === 'Όλα' ? {} : { c: cat },
+  })
 }
 
 const filtered = computed(() =>
