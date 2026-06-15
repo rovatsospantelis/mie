@@ -5,6 +5,7 @@ import TheFooter from '@/components/TheFooter.vue'
 import WhatsAppButton from '@/components/WhatsAppButton.vue'
 import { site } from '@/config/site'
 import { useStructuredData } from '@/composables/useSeo'
+import BrandWordmark from '@/components/BrandWordmark.vue'
 
 // JSON-LD μία φορά για όλο το site
 useStructuredData()
@@ -27,6 +28,8 @@ const navLinks = [
       </Transition>
     </RouterView>
   </main>
+
+<!--  <BrandWordmark />-->
 
   <TheFooter />
 

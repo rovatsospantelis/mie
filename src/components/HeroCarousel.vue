@@ -67,7 +67,7 @@ const current = computed(() => props.slides[index.value])
           <transition name="rise" mode="out-in">
             <div :key="index" class="max-w-xl text-white">
               <p v-if="current.eyebrow" class="label text-white/80">{{ current.eyebrow }}</p>
-              <h1 class="mt-3 text-5xl font-medium md:text-7xl">{{ current.title }}</h1>
+              <h1 class="mt-3 text-3xl font-medium md:text-5xl">{{ current.title }}</h1>
               <p v-if="current.text" class="mt-4 max-w-md text-base text-white/85 md:text-lg">
                 {{ current.text }}
               </p>

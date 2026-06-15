@@ -21,10 +21,11 @@ usePageSeo({
         </div>
         <div v-reveal="1">
           <p class="eyebrow text-xl md:text-2xl">Το εργαστήριο</p>
-          <h1 class="mt-3 text-4xl md:text-6xl">
+          <h1 class="mt-3 text-2xl md:text-4xl">
             <span class="brush">Μαρίνα Δούκα</span>
           </h1>
-          <p class="mt-6 font-display text-2xl italic leading-snug text-ink md:text-3xl">
+          <br>
+          <p class="space-y-6 text-lg leading-relaxed text-ink-soft">
             {{ about.lead }}
           </p>
         </div>

@@ -25,7 +25,7 @@ const featuredWorks = [...pick('Pure art', 2), ...pick('Creative items', 2), ...
       <div class="grid items-center gap-10 md:grid-cols-2 md:gap-16">
         <div v-reveal class="order-2 md:order-1">
           <p class="label text-accent">{{ feature.eyebrow }}</p>
-          <h2 class="mt-4 text-4xl md:text-6xl">{{ feature.title }}</h2>
+          <h2 class="mt-4 text-2xl md:text-4xl">{{ feature.title }}</h2>
           <p class="mt-5 max-w-md leading-relaxed text-ink-soft">{{ feature.text }}</p>
           <RouterLink :to="feature.cta.to" class="link-cta label mt-7 inline-block">
             {{ feature.cta.label }}
@@ -76,7 +76,7 @@ const featuredWorks = [...pick('Pure art', 2), ...pick('Creative items', 2), ...
     <section class="mx-auto max-w-6xl px-6 py-20 md:py-28">
       <div class="text-center">
         <p class="eyebrow text-xl md:text-2xl">Πρόσφατα</p>
-        <h2 class="mt-1 text-3xl md:text-5xl">Επιλεγμένα έργα</h2>
+        <h2 class="mt-1 text-3xl md:text-4xl">Επιλεγμένα έργα</h2>
       </div>
 
       <div class="mt-14 grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
@@ -127,7 +127,7 @@ const featuredWorks = [...pick('Pure art', 2), ...pick('Creative items', 2), ...
            class="pointer-events-none absolute -right-8 -bottom-16 w-2/5 max-w-md select-none opacity-20 md:opacity-25" />
       <div class="relative z-10 mx-auto max-w-3xl px-6 py-20 text-center">
         <p class="label text-white/70">Ας συνεργαστούμε</p>
-        <h2 class="mt-4 text-4xl text-white md:text-5xl">Έχετε ένα έργο στο μυαλό σας;</h2>
+        <h2 class="mt-4 text-3xl text-white md:text-4xl">Έχετε ένα έργο στο μυαλό σας;</h2>
         <p class="mt-4 text-white/75">Παραγγελίες, συνεργασίες και custom αντικείμενα — ας τα πούμε.</p>
         <RouterLink to="/contact" class="btn mt-8" style="background:#fff;color:var(--color-accent-deep)">
           Επικοινωνία

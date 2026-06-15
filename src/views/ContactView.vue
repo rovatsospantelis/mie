@@ -18,7 +18,7 @@ const formEndpoint = ''
   <section class="mx-auto max-w-6xl px-6 pt-14 pb-24 md:pt-16">
     <div class="text-center">
       <p class="eyebrow text-xl md:text-2xl">Ας μιλήσουμε</p>
-      <h1 class="mt-1 text-4xl md:text-6xl">Επικοινωνία</h1>
+      <h1 class="mt-1 text-2xl md:text-4xl">Επικοινωνία</h1>
     </div>
 
     <div class="mt-14 grid gap-12 lg:grid-cols-2">

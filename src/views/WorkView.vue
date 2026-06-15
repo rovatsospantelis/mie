@@ -61,7 +61,7 @@ function onTouchEnd(e) {
       <!-- Header -->
       <div class="text-center">
         <p class="eyebrow text-xl md:text-2xl">Το χαρτοφυλάκιο</p>
-        <h1 class="mt-1 text-4xl md:text-6xl">Έργα</h1>
+        <h1 class="mt-1 text-2xl md:text-4xl">Έργα</h1>
       </div>
 
       <!-- Filters (υπο-tabs) -->

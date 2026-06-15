@@ -57,7 +57,7 @@ export const feature = {
 
 // --- Συλλογές / υπο-κατηγορίες (τα 3 υπο-tabs των Έργων) ---
 export const collections = [
-  { title: 'Sketches', image: '/works/sketches/sketches-01.jpg', category: 'Sketches' },
+  { title: 'Sketches', image: '/works/sketches/sketches-14.jpg', category: 'Sketches' },
   { title: 'Creative items', image: '/works/items/items-02.jpg', category: 'Creative items' },
   { title: 'Pure art', image: '/works/pure/pure-02.jpg', category: 'Pure art' },
 ]
@@ -65,19 +65,11 @@ export const collections = [
 // --- Έργα (grid + lightbox) ---
 export const works = [
   // Sketches — έργα σε χαρτί / prints
-  { category: 'Sketches', image: '/works/sketches/sketches-01.jpg' },
-  { category: 'Sketches', image: '/works/sketches/sketches-02.jpg' },
-  { category: 'Sketches', image: '/works/sketches/sketches-03.jpg' },
   { category: 'Sketches', image: '/works/sketches/sketches-04.jpg' },
   { category: 'Sketches', image: '/works/sketches/sketches-05.jpg' },
-  { category: 'Sketches', image: '/works/sketches/sketches-06.jpg' },
-  { category: 'Sketches', image: '/works/sketches/sketches-07.jpg' },
-  { category: 'Sketches', image: '/works/sketches/sketches-08.jpg' },
   { category: 'Sketches', image: '/works/sketches/sketches-09.jpg' },
-  { category: 'Sketches', image: '/works/sketches/sketches-10.jpg' },
   { category: 'Sketches', image: '/works/sketches/sketches-11.jpg' },
   { category: 'Sketches', image: '/works/sketches/sketches-12.jpg' },
-  { category: 'Sketches', image: '/works/sketches/sketches-13.jpg' },
   { category: 'Sketches', image: '/works/sketches/sketches-14.jpg' },
   { category: 'Sketches', image: '/works/sketches/sketches-15.jpg' },
   // Creative items — design αντικείμενα & print pieces
@@ -86,7 +78,6 @@ export const works = [
   { category: 'Creative items', image: '/works/items/items-03.jpg' },
   { category: 'Creative items', image: '/works/items/items-04.jpg' },
   { category: 'Creative items', image: '/works/items/items-05.jpg' },
-  { category: 'Creative items', image: '/works/items/items-06.jpg' },
   { category: 'Creative items', image: '/works/items/items-07.jpg' },
   { category: 'Creative items', image: '/works/items/items-08.jpg' },
   { category: 'Creative items', image: '/works/items/items-09.jpg' },
@@ -131,3 +122,13 @@ export const about = {
   ],
   focus: ['Art pieces', 'Print pieces', 'Χρώμα & φόρμα', 'Interior architecture'],
 }
+
+export const wordmark = {
+  text: 'mie',
+  letters: [
+    { char: 'm', image: '/works/pure/pure-02.jpg',        position: '50% 42%' },
+    { char: 'i', image: '/works/sketches/sketches-04.jpg', position: '50% 40%' },
+    { char: 'e', image: '/works/items/items-05.jpg',       position: '50% 50%' }
+  ]
+}
+
