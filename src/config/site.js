@@ -73,7 +73,7 @@ export const site = {
   // --- Υπογραφή TenLux (easter egg) ---
   credit: {
     name: 'TenLux',
-    email: 'hello@tenlux.dev',
+    email: 'p.rovatso@gmail.com',
     motto: 'Post tenebras spero lucem',
   },
 }

@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde2a5fa-9c4e-4e2c-8d17-4c456fc7985c" name="Changes" comment="-PWA pics change and nav bar chnge to drawer">
+    <list default="true" id="bde2a5fa-9c4e-4e2c-8d17-4c456fc7985c" name="Changes" comment="-Caarousel time and effect change">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HeroCarousel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HeroCarousel.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +114,8 @@
       <workItem from="1781347974493" duration="8580000" />
       <workItem from="1781523061943" duration="38000" />
       <workItem from="1781532866367" duration="8948000" />
-      <workItem from="1781556925274" duration="892000" />
+      <workItem from="1781556925274" duration="1208000" />
+      <workItem from="1781559004013" duration="307000" />
     </task>
     <task id="LOCAL-00001" summary="-Pictures update">
       <option name="closed" value="true" />
@@ -141,7 +141,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781552999996</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="-Caarousel time and effect change">
+      <option name="closed" value="true" />
+      <created>1781557882274</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1781557882274</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,6 +159,7 @@
     <MESSAGE value="-Pictures update" />
     <MESSAGE value="-Style update" />
     <MESSAGE value="-PWA pics change and nav bar chnge to drawer" />
-    <option name="LAST_COMMIT_MESSAGE" value="-PWA pics change and nav bar chnge to drawer" />
+    <MESSAGE value="-Caarousel time and effect change" />
+    <option name="LAST_COMMIT_MESSAGE" value="-Caarousel time and effect change" />
   </component>
 </project>
