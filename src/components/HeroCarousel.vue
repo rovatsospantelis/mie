@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-vue-next'
 
 const props = defineProps({
   slides: { type: Array, default: () => [] },
-  interval: { type: Number, default: 6000 },
+  interval: { type: Number, default: 3000 },
 })
 
 const index = ref(0)
@@ -43,7 +43,7 @@ const current = computed(() => props.slides[index.value])
   >
     <!-- Slides -->
     <div class="relative h-[68vh] min-h-[440px] md:h-[78vh]">
-      <transition-group name="fade">
+      <transition-group name="blur-fade">
         <div
           v-for="(s, i) in slides"
           v-show="i === index"
@@ -137,14 +137,25 @@ const current = computed(() => props.slides[index.value])
   }
 }
 
-.fade-enter-active { transition: opacity 1s ease; }
-.fade-leave-active { transition: opacity 1s ease; }
-.fade-enter-from, .fade-leave-to { opacity: 0; }
+.blur-fade-enter-active,
+.blur-fade-leave-active {
+  transition:
+      opacity 2s ease,
+      filter 2s ease,
+      transform 2.4s ease;
+}
 
-.rise-enter-active { transition: opacity .7s ease, transform .7s cubic-bezier(.16,1,.3,1); }
-.rise-leave-active { transition: opacity .3s ease; }
-.rise-enter-from { opacity: 0; transform: translateY(18px); }
-.rise-leave-to { opacity: 0; }
+.blur-fade-enter-from {
+  opacity: 0;
+  filter: blur(8px);
+  transform: scale(1.035);
+}
+
+.blur-fade-leave-to {
+  opacity: 0;
+  filter: blur(4px);
+  transform: scale(1);
+}
 
 @media (prefers-reduced-motion: reduce) {
   .fade-enter-active, .fade-leave-active,

@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde2a5fa-9c4e-4e2c-8d17-4c456fc7985c" name="Changes" comment="-Style update">
+    <list default="true" id="bde2a5fa-9c4e-4e2c-8d17-4c456fc7985c" name="Changes" comment="-PWA pics change and nav bar chnge to drawer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pwa-192x192.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/pwa-192x192.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pwa-512x512.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/pwa-512x512.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pwa-maskable-512x512.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/pwa-maskable-512x512.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TheNavbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TheNavbar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/WorkView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/WorkView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HeroCarousel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HeroCarousel.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,30 +44,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/provatsos/Desktop/mie/public",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.dev # http://localhost:5173.executor": "Run",
-    "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "/snap/intellij-idea-ultimate/738/plugins/javascript-plugin/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/provatsos/Desktop/mie/public&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev # http://localhost:5173.executor&quot;: &quot;Run&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/snap/intellij-idea-ultimate/738/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public" />
@@ -118,7 +114,8 @@
       <workItem from="1781281191805" duration="3699000" />
       <workItem from="1781347974493" duration="8580000" />
       <workItem from="1781523061943" duration="38000" />
-      <workItem from="1781532866367" duration="8386000" />
+      <workItem from="1781532866367" duration="8948000" />
+      <workItem from="1781556925274" duration="892000" />
     </task>
     <task id="LOCAL-00001" summary="-Pictures update">
       <option name="closed" value="true" />
@@ -136,7 +133,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781542231975</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="-PWA pics change and nav bar chnge to drawer">
+      <option name="closed" value="true" />
+      <created>1781552999996</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1781552999996</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +150,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="-Pictures update" />
     <MESSAGE value="-Style update" />
-    <option name="LAST_COMMIT_MESSAGE" value="-Style update" />
+    <MESSAGE value="-PWA pics change and nav bar chnge to drawer" />
+    <option name="LAST_COMMIT_MESSAGE" value="-PWA pics change and nav bar chnge to drawer" />
   </component>
 </project>
