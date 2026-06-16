@@ -10,14 +10,21 @@
 // --- Hero carousel (αρχική) ---
 export const heroSlides = [
   {
-    image: '/works/pure/pure-10.png',
+    image: '/works/pure/pure-02.jpg',
     eyebrow: 'Pure art',
     title: 'Χρώμα & φόρμα',
     text: 'Art pieces και print pieces με χαρακτήρα και προσωπική ταυτότητα.',
     cta: { label: 'Δείτε τα έργα', to: '/works' },
   },
   {
-    image: '/works/pure/pure-02.jpg',
+    image: '/works/pure/pure-01.jpg',
+    eyebrow: 'Pure art',
+    title: 'Πίνακες',
+    text: 'Αφηρημένες συνθέσεις σε χρώμα και υφή.',
+    cta: { label: 'Δείτε τους πίνακες', to: { path: '/works', query: { c: 'Pure art' } } },
+  },
+  {
+    image: '/works/pure/pure-06.jpg',
     eyebrow: 'Pure art',
     title: 'Πίνακες',
     text: 'Αφηρημένες συνθέσεις σε χρώμα και υφή.',

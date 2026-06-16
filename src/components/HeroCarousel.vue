@@ -21,6 +21,42 @@ function go(i) {
 function next() { go(index.value + 1) }
 function prev() { go(index.value - 1) }
 
+let touchStartX = 0
+let touchStartY = 0
+
+function onTouchStart(e) {
+  const touch = e.touches[0]
+
+  touchStartX = touch.clientX
+  touchStartY = touch.clientY
+}
+
+function onTouchEnd(e) {
+  if (props.slides.length < 2) return
+
+  const touch = e.changedTouches[0]
+
+  const diffX = touch.clientX - touchStartX
+  const diffY = touch.clientY - touchStartY
+
+  const minSwipeDistance = 50
+
+  // Αγνοούμε κάθετο scroll
+  if (Math.abs(diffX) < minSwipeDistance || Math.abs(diffX) < Math.abs(diffY)) {
+    return
+  }
+
+  // Swipe left => επόμενη φωτογραφία
+  if (diffX < 0) {
+    next()
+  }
+
+  // Swipe right => προηγούμενη φωτογραφία
+  if (diffX > 0) {
+    prev()
+  }
+}
+
 function start() {
   if (reduced || props.slides.length < 2) return
   stop()
@@ -36,10 +72,12 @@ const current = computed(() => props.slides[index.value])
 
 <template>
   <section
-    class="relative w-full overflow-hidden"
-    @mouseenter="paused = true"
-    @mouseleave="paused = false"
-    aria-roledescription="carousel"
+      class="relative w-full overflow-hidden"
+      @mouseenter="paused = true"
+      @mouseleave="paused = false"
+      @touchstart.passive="onTouchStart"
+      @touchend.passive="onTouchEnd"
+      aria-roledescription="carousel"
   >
     <!-- Slides -->
     <div class="relative h-[68vh] min-h-[440px] md:h-[78vh]">

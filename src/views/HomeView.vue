@@ -5,6 +5,7 @@ import HeroCarousel from '@/components/HeroCarousel.vue'
 import { site } from '@/config/site'
 import { usePageSeo } from '@/composables/useSeo'
 import { heroSlides, feature, collections, works, editorial } from '@/config/content'
+import WorksMosaic from '@/components/WorksMosaic.vue'
 
 usePageSeo({
   title: `${site.name} — ${site.tagline}`,
@@ -74,27 +75,12 @@ const featuredWorks = [...pick('Pure art', 2), ...pick('Creative items', 2), ...
 
     <!-- ΕΠΙΛΕΓΜΕΝΑ ΕΡΓΑ -->
     <section class="mx-auto max-w-6xl px-6 py-20 md:py-28">
-      <div class="text-center">
-        <p class="eyebrow text-xl md:text-2xl">Πρόσφατα</p>
-        <h2 class="mt-1 text-3xl md:text-4xl">Επιλεγμένα έργα</h2>
+      <div class="text-center" style="margin-bottom: 20px">
+        <p class="eyebrow text-xl md:text-2xl">Random</p>
+        <h2 class="mt-1 text-3xl md:text-4xl">Μωσαϊκό έργων</h2>
       </div>
 
-      <div class="mt-14 grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-        <article v-for="(w, i) in featuredWorks" :key="w.image" v-reveal="i % 3" class="group">
-          <div class="overflow-hidden bg-bg-soft">
-            <img :src="w.image" :alt="w.title || w.category"
-                 class="aspect-square w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-                 loading="lazy" />
-          </div>
-          <p class="label mt-3 text-[11px] text-ink-soft">{{ w.category }}</p>
-        </article>
-      </div>
-
-      <div class="mt-14 text-center">
-        <RouterLink to="/works" class="btn btn-primary">
-          Όλα τα έργα <ArrowRight :size="15" :stroke-width="2" />
-        </RouterLink>
-      </div>
+      <WorksMosaic />
     </section>
 
     <!-- EDITORIAL 3-UP -->

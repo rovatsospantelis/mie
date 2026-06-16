@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde2a5fa-9c4e-4e2c-8d17-4c456fc7985c" name="Changes" comment="-pwa iphone image">
+    <list default="true" id="bde2a5fa-9c4e-4e2c-8d17-4c456fc7985c" name="Changes" comment="-correct error">
+      <change afterPath="$PROJECT_DIR$/src/components/WorksMosaic.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HeroCarousel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HeroCarousel.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/content.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config/site.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/site.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomeView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +121,8 @@
       <workItem from="1781523061943" duration="38000" />
       <workItem from="1781532866367" duration="8948000" />
       <workItem from="1781556925274" duration="1208000" />
-      <workItem from="1781559004013" duration="2683000" />
+      <workItem from="1781559004013" duration="3650000" />
+      <workItem from="1781633128803" duration="4230000" />
     </task>
     <task id="LOCAL-00001" summary="-Pictures update">
       <option name="closed" value="true" />
@@ -174,7 +180,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781561366240</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="-correct error">
+      <option name="closed" value="true" />
+      <created>1781561704904</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1781561704904</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,6 +211,7 @@
     <MESSAGE value="-PWA pics change and nav bar chnge to drawer" />
     <MESSAGE value="-Caarousel time and effect change" />
     <MESSAGE value="-pwa iphone image" />
-    <option name="LAST_COMMIT_MESSAGE" value="-pwa iphone image" />
+    <MESSAGE value="-correct error" />
+    <option name="LAST_COMMIT_MESSAGE" value="-correct error" />
   </component>
 </project>
