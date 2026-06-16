@@ -12,12 +12,13 @@
     <meta name="theme-color" content="#141310" media="(prefers-color-scheme: dark)" />
 
     <!-- No-flash theme -->
+    <!-- No-flash theme — default: light, dark μόνο με ρητή επιλογή -->
     <script>
         (function () {
             try {
-                var t = localStorage.getItem('theme')
-                if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-                if (t === 'dark') document.documentElement.classList.add('dark')
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.documentElement.classList.add('dark')
+                }
             } catch (e) {}
         })()
     </script>

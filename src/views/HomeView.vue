@@ -6,6 +6,7 @@ import { site } from '@/config/site'
 import { usePageSeo } from '@/composables/useSeo'
 import { heroSlides, feature, collections, works, editorial } from '@/config/content'
 import WorksMosaic from '@/components/WorksMosaic.vue'
+import CollectionBand from '@/components/CollectionBand.vue'
 
 usePageSeo({
   title: `${site.name} — ${site.tagline}`,
@@ -39,35 +40,25 @@ const featuredWorks = [...pick('Pure art', 2), ...pick('Creative items', 2), ...
       </div>
     </section>
 
-    <!-- ΣΥΛΛΟΓΕΣ -->
-    <section class="border-y border-line bg-bg-soft">
+    <!-- EDITORIAL 3-UP -->
+    <section class="border-t border-line">
       <div class="mx-auto max-w-6xl px-6 py-16 md:py-20">
-        <div class="flex items-end justify-between">
-          <div>
-            <p class="eyebrow text-xl md:text-2xl">Δείτε ανά</p>
-            <h2 class="mt-1 text-3xl md:text-4xl">Συλλογές</h2>
-          </div>
-          <RouterLink to="/works" class="label hidden text-ink-soft transition-colors hover:text-ink sm:inline-block">
-            Όλα τα έργα →
-          </RouterLink>
-        </div>
-
-        <div class="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-3 md:gap-6">
+        <div class="grid gap-6 md:grid-cols-3">
           <RouterLink
-            v-for="(col, i) in collections"
-            :key="col.title"
-            :to="{ path: '/works', query: { c: col.category } }"
-            v-reveal="i"
-            class="group block"
+              v-for="(e, i) in editorial"
+              :key="e.title"
+              :to="e.to"
+              v-reveal="i"
+              class="group relative block overflow-hidden"
           >
-            <div class="overflow-hidden">
-              <img :src="col.image" :alt="col.title"
-                   class="aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                   loading="lazy" />
+            <img :src="e.image" :alt="e.title"
+                 class="aspect-[3/4] w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                 loading="lazy" />
+            <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/65 via-black/10 to-transparent p-7 text-white">
+              <p class="label text-white/80">{{ e.label }}</p>
+              <h3 class="mt-1 text-3xl">{{ e.title }}</h3>
+              <span class="link-cta label mt-3 inline-block w-fit">Δείτε →</span>
             </div>
-            <p class="label mt-3 text-ink transition-colors group-hover:text-accent">
-              {{ col.title }}
-            </p>
           </RouterLink>
         </div>
       </div>
@@ -83,26 +74,44 @@ const featuredWorks = [...pick('Pure art', 2), ...pick('Creative items', 2), ...
       <WorksMosaic />
     </section>
 
-    <!-- EDITORIAL 3-UP -->
-    <section class="border-t border-line">
+    <!-- ΣΥΛΛΟΓΕΣ -->
+    <section class="border-y border-line bg-bg-soft">
       <div class="mx-auto max-w-6xl px-6 py-16 md:py-20">
-        <div class="grid gap-6 md:grid-cols-3">
-          <RouterLink
-            v-for="(e, i) in editorial"
-            :key="e.title"
-            :to="e.to"
-            v-reveal="i"
-            class="group relative block overflow-hidden"
-          >
-            <img :src="e.image" :alt="e.title"
-                 class="aspect-[3/4] w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                 loading="lazy" />
-            <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/65 via-black/10 to-transparent p-7 text-white">
-              <p class="label text-white/80">{{ e.label }}</p>
-              <h3 class="mt-1 text-3xl">{{ e.title }}</h3>
-              <span class="link-cta label mt-3 inline-block w-fit">Δείτε →</span>
-            </div>
+        <div class="flex items-end justify-between">
+          <div>
+            <p class="eyebrow text-xl md:text-2xl">Δείτε ανά</p>
+            <h2 class="mt-1 text-3xl md:text-4xl">Συλλογές</h2>
+          </div>
+          <RouterLink to="/works" class="label hidden text-ink-soft transition-colors hover:text-ink sm:inline-block">
+            Όλα τα έργα →
           </RouterLink>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-3 md:gap-6">
+          <RouterLink
+              v-for="(col, i) in collections"
+              :key="col.title"
+              :to="{ path: '/works', query: { c: col.category } }"
+              v-reveal="i"
+              class="group block"
+          >
+            <div class="overflow-hidden">
+              <img :src="col.image" :alt="col.title"
+                   class="aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                   loading="lazy" />
+            </div>
+            <p class="label mt-3 text-ink transition-colors group-hover:text-accent">
+              {{ col.title }}
+            </p>
+          </RouterLink>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-y border-line bg-bg-soft">
+      <div class="mx-auto max-w-6xl px-6 py-16 md:py-20">
+        <div class="flex items-end justify-between">
+          <CollectionBand />
         </div>
       </div>
     </section>

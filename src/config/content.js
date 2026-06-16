@@ -38,13 +38,6 @@ export const heroSlides = [
     cta: { label: 'Δείτε τους πίνακες', to: { path: '/works', query: { c: 'Pure art' } } },
   },
   {
-    image: '/works/pure/pure-11.png',
-    eyebrow: 'Pure art',
-    title: 'Πίνακες',
-    text: 'Αφηρημένες συνθέσεις σε χρώμα και υφή.',
-    cta: { label: 'Δείτε τους πίνακες', to: { path: '/works', query: { c: 'Pure art' } } },
-  },
-  {
     image: '/about/exhibition.jpg',
     eyebrow: 'Εργαστήριο',
     title: 'Στο στούντιο',
