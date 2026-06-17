@@ -18,28 +18,20 @@ export const site = {
 
   // --- Επικοινωνία ---
   contact: {
-    phone: '+30 21 0000 0000',
-    phoneRaw: '+302100000000',
-    mobile: '+30 690 000 0000',
-    mobileRaw: '+306900000000',
-    email: 'hello@mie.example',
-    address: {
-      street: 'Ηρακλειδών 1',
-      area: 'Θησείο, Αθήνα',
-      postalCode: '11851',
-      country: 'GR',
-      lat: 37.9765,
-      lng: 23.7185,
-    }
+    mobile: '+30 697 821 0093',
+    mobileRaw: '+306978210093',
+    email: 'doyka.marina@gmail.com',
+    address: ''
   },
 
   // --- Social (άσε κενό '' για να μην εμφανίζεται) ---
-  social: {
-    instagram: 'https://instagram.com/',
-    tiktok: '',
-    facebook: '',
-    whatsapp: '',
-  },
+  // social: {
+  //   instagram: 'https://instagram.com/',
+  //   tiktok: '',
+  //   facebook: '',
+  //   whatsapp: '',
+  // },
+  social: '',
 
   // --- Booking / κύριο CTA (κενό = ανενεργό) ---
   cta: {

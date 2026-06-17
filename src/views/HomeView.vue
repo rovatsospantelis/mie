@@ -1,10 +1,9 @@
 <script setup>
 import { RouterLink } from 'vue-router'
-import { ArrowRight } from 'lucide-vue-next'
 import HeroCarousel from '@/components/HeroCarousel.vue'
 import { site } from '@/config/site'
 import { usePageSeo } from '@/composables/useSeo'
-import { heroSlides, feature, collections, works, editorial } from '@/config/content'
+import { heroSlides, feature, works, editorial } from '@/config/content'
 import WorksMosaic from '@/components/WorksMosaic.vue'
 import CollectionBand from '@/components/CollectionBand.vue'
 
