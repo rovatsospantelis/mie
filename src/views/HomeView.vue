@@ -40,10 +40,20 @@ const featuredWorks = [...pick('Pure art', 2), ...pick('Creative items', 2), ...
       </div>
     </section>
 
-    <!-- EDITORIAL 3-UP -->
-    <section class="border-t border-line">
+    <!-- ΣΥΛΛΟΓΕΣ -->
+    <section class="border-y border-line bg-bg-soft">
       <div class="mx-auto max-w-6xl px-6 py-16 md:py-20">
-        <div class="grid gap-6 md:grid-cols-3">
+        <div class="flex items-end justify-between">
+          <div>
+            <p class="eyebrow text-xl md:text-2xl">Δείτε ανά</p>
+            <h2 class="mt-1 text-3xl md:text-4xl">Συλλογές</h2>
+          </div>
+          <RouterLink to="/works" class="label hidden text-ink-soft transition-colors hover:text-ink sm:inline-block">
+            Όλα τα έργα →
+          </RouterLink>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-3 md:gap-6">
           <RouterLink
               v-for="(e, i) in editorial"
               :key="e.title"
@@ -72,40 +82,6 @@ const featuredWorks = [...pick('Pure art', 2), ...pick('Creative items', 2), ...
       </div>
 
       <WorksMosaic />
-    </section>
-
-    <!-- ΣΥΛΛΟΓΕΣ -->
-    <section class="border-y border-line bg-bg-soft">
-      <div class="mx-auto max-w-6xl px-6 py-16 md:py-20">
-        <div class="flex items-end justify-between">
-          <div>
-            <p class="eyebrow text-xl md:text-2xl">Δείτε ανά</p>
-            <h2 class="mt-1 text-3xl md:text-4xl">Συλλογές</h2>
-          </div>
-          <RouterLink to="/works" class="label hidden text-ink-soft transition-colors hover:text-ink sm:inline-block">
-            Όλα τα έργα →
-          </RouterLink>
-        </div>
-
-        <div class="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-3 md:gap-6">
-          <RouterLink
-              v-for="(col, i) in collections"
-              :key="col.title"
-              :to="{ path: '/works', query: { c: col.category } }"
-              v-reveal="i"
-              class="group block"
-          >
-            <div class="overflow-hidden">
-              <img :src="col.image" :alt="col.title"
-                   class="aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                   loading="lazy" />
-            </div>
-            <p class="label mt-3 text-ink transition-colors group-hover:text-accent">
-              {{ col.title }}
-            </p>
-          </RouterLink>
-        </div>
-      </div>
     </section>
 
     <section class="border-y border-line bg-bg-soft">

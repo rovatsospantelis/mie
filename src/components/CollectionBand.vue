@@ -19,7 +19,7 @@ const props = defineProps({
   buttonLabel: { type: String, default: 'Δείτε τη συλλογή' },
   to: { type: [String, Object], default: () => ({ path: '/works', query: { c: 'Pure art' } }) },
   category: { type: String, default: 'Pure art' },
-  image: { type: String, default: '/works/pure/pure-11.png' }, // override· αλλιώς τυχαία από category
+  image: { type: String, default: '/works/pure/pure-05.jpg' }, // override· αλλιώς τυχαία από category
   reverse: { type: Boolean, default: false }, // φωτο αριστερά αντί δεξιά
 })
 

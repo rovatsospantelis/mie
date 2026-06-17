@@ -107,7 +107,7 @@ export const works = [
 // --- Editorial 3-up ---
 export const editorial = [
   { title: 'Sketches', label: 'Έργα σε χαρτί', image: '/works/sketches/sketches-05.jpg', to: { path: '/works', query: { c: 'Sketches' } } },
-  { title: 'Creative items', label: 'Αντικείμενα & prints', image: '/works/items/items-05.jpg', to: { path: '/works', query: { c: 'Creative items' } } },
+  { title: 'Creative items', label: 'Αντικείμενα & prints', image: '/works/items/items-04.jpg', to: { path: '/works', query: { c: 'Creative items' } } },
   { title: 'Pure art', label: 'Πίνακες', image: '/works/pure/pure-03.jpg', to: { path: '/works', query: { c: 'Pure art' } } },
 ]
 
