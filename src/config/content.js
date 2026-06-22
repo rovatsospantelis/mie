@@ -44,6 +44,13 @@ export const heroSlides = [
     text: 'Από το σχέδιο στο αντικείμενο — όλα γίνονται με το χέρι.',
     cta: { label: 'Γνωρίστε με', to: '/about' },
   },
+  {
+    image: '/about/place.png',
+    eyebrow: 'Εργαστήριο',
+    title: 'Στο στούντιο',
+    text: 'Από το σχέδιο στο αντικείμενο — όλα γίνονται με το χέρι.',
+    cta: { label: 'Γνωρίστε με', to: '/about' },
+  },
 ]
 
 // --- Feature banner ---
@@ -72,6 +79,38 @@ export const works = [
   { category: 'Sketches', image: '/works/sketches/sketches-12.jpg' },
   { category: 'Sketches', image: '/works/sketches/sketches-14.jpg' },
   { category: 'Sketches', image: '/works/sketches/sketches-15.jpg' },
+  { category: 'Sketches', image: '/works/sketches/sketches-16.jpg' },
+  { category: 'Sketches', image: '/works/sketches/sketches-17.jpg' },
+  { category: 'Sketches', image: '/works/sketches/sketches-18.jpg' },
+  { category: 'Sketches', image: '/works/sketches/sketches-19.jpg' },
+  { category: 'Sketches', image: '/works/sketches/sketches-20.jpg' },
+  { category: 'Sketches', image: '/works/sketches/sketches-21.jpg' },
+  { category: 'Sketches', image: '/works/sketches/sketches-22.jpg' },
+  { category: 'Sketches', image: '/works/sketches/sketches-23.jpg' },
+  { category: 'Sketches', image: '/works/sketches/sketches-24.jpg' },
+  { category: 'Sketches', image: '/works/sketches/sketches-25.jpg' },
+  { category: 'Sketches', image: '/works/sketches/sketches-26.jpg' },
+  { category: 'Sketches', image: '/works/sketches/sketches-27.jpg' },
+  { category: 'Sketches', image: '/works/sketches/sketches-28.jpg' },
+  { category: 'Sketches', image: '/works/sketches/sketches-29.jpg' },
+  { category: 'Sketches', image: '/works/sketches/sketches-30.jpg' },
+  { category: 'Sketches', image: '/works/sketches/sketches-31.jpg' },
+  { category: 'Sketches', image: '/works/sketches/sketches-32.jpg' },
+  { category: 'Sketches', image: '/works/sketches/sketches-33.jpg' },
+  { category: 'Sketches', image: '/works/sketches/sketches-34.jpg' },
+  { category: 'Sketches', image: '/works/sketches/sketches-35.jpg' },
+  { category: 'Sketches', image: '/works/sketches/sketches-36.jpg' },
+  { category: 'Sketches', image: '/works/sketches/sketches-37.jpg' },
+  { category: 'Sketches', image: '/works/sketches/sketches-38.jpg' },
+  { category: 'Sketches', image: '/works/sketches/sketches-39.jpg' },
+  { category: 'Sketches', image: '/works/sketches/sketches-40.jpg' },
+  { category: 'Sketches', image: '/works/sketches/sketches-41.jpg' },
+  { category: 'Sketches', image: '/works/sketches/sketches-42.jpg' },
+  { category: 'Sketches', image: '/works/sketches/sketches-43.jpg' },
+  { category: 'Sketches', image: '/works/sketches/sketches-44.jpg' },
+  { category: 'Sketches', image: '/works/sketches/sketches-45.jpg' },
+  { category: 'Sketches', image: '/works/sketches/sketches-46.jpg' },
+  { category: 'Sketches', image: '/works/sketches/sketches-47.jpg' },
   // Creative items — design αντικείμενα & print pieces
   { category: 'Creative items', image: '/works/items/items-01.jpg' },
   { category: 'Creative items', image: '/works/items/items-02.jpg' },
@@ -101,7 +140,9 @@ export const works = [
   { category: 'Pure art', image: '/works/pure/pure-09.png' },
   { category: 'Pure art', image: '/works/pure/pure-10.png' },
   { category: 'Pure art', image: '/works/pure/pure-11.png' },
-  { category: 'Pure art', image: '/works/pure/pure-12.png' }
+  { category: 'Pure art', image: '/works/pure/pure-12.png' },
+  { category: 'Pure art', image: '/works/pure/pure-13.png' },
+  { category: 'Pure art', image: '/works/pure/pure-14.png' }
 ]
 
 // --- Editorial 3-up ---
@@ -114,7 +155,7 @@ export const editorial = [
 // --- Σχετικά (σελίδα /about) ---
 export const about = {
   portrait: '/about/studio.jpg',
-  secondary: '/about/exhibition.jpg',
+  secondary: '/about/me.png',
   lead: 'Η Marina είναι creative designer με υπόβαθρο στην εσωτερική αρχιτεκτονική και πάθος για τη σύνθεση, το χρώμα και το visual storytelling.',
   paragraphs: [
     'Μέσα από τα art pieces και τα print pieces της εξερευνά παιχνιδιάρικες φόρμες, προσεγμένες λεπτομέρειες και εκφραστική αισθητική, δημιουργώντας έργα που είναι ταυτόχρονα σύγχρονα και προσωπικά.',
