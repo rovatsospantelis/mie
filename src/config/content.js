@@ -10,6 +10,13 @@
 // --- Hero carousel (αρχική) ---
 export const heroSlides = [
   {
+    image: '/works/pure/pure-04.jpg',
+    eyebrow: 'Pure art',
+    title: 'Πίνακες',
+    text: 'Αφηρημένες συνθέσεις σε χρώμα και υφή.',
+    cta: { label: 'Δείτε τους πίνακες', to: { path: '/works', query: { c: 'Pure art' } } },
+  },
+  {
     image: '/works/pure/pure-02.jpg',
     eyebrow: 'Pure art',
     title: 'Χρώμα & φόρμα',
@@ -31,20 +38,6 @@ export const heroSlides = [
     cta: { label: 'Δείτε τους πίνακες', to: { path: '/works', query: { c: 'Pure art' } } },
   },
   {
-    image: '/works/pure/pure-04.jpg',
-    eyebrow: 'Pure art',
-    title: 'Πίνακες',
-    text: 'Αφηρημένες συνθέσεις σε χρώμα και υφή.',
-    cta: { label: 'Δείτε τους πίνακες', to: { path: '/works', query: { c: 'Pure art' } } },
-  },
-  {
-    image: '/about/exhibition.jpg',
-    eyebrow: 'Εργαστήριο',
-    title: 'Στο στούντιο',
-    text: 'Από το σχέδιο στο αντικείμενο — όλα γίνονται με το χέρι.',
-    cta: { label: 'Γνωρίστε με', to: '/about' },
-  },
-  {
     image: '/about/place.png',
     eyebrow: 'Εργαστήριο',
     title: 'Στο στούντιο',
@@ -64,7 +57,7 @@ export const feature = {
 
 // --- Συλλογές / υπο-κατηγορίες (τα 3 υπο-tabs των Έργων) ---
 export const collections = [
-  { title: 'Sketches', image: '/works/sketches/sketches-14.jpg', category: 'Sketches' },
+  { title: 'Sketches', image: '/works/sketches/sketches-19.jpg', category: 'Sketches' },
   { title: 'Creative items', image: '/works/items/items-02.jpg', category: 'Creative items' },
   { title: 'Pure art', image: '/works/pure/pure-02.jpg', category: 'Pure art' },
 ]
@@ -72,13 +65,6 @@ export const collections = [
 // --- Έργα (grid + lightbox) ---
 export const works = [
   // Sketches — έργα σε χαρτί / prints
-  { category: 'Sketches', image: '/works/sketches/sketches-04.jpg' },
-  { category: 'Sketches', image: '/works/sketches/sketches-05.jpg' },
-  { category: 'Sketches', image: '/works/sketches/sketches-09.jpg' },
-  { category: 'Sketches', image: '/works/sketches/sketches-11.jpg' },
-  { category: 'Sketches', image: '/works/sketches/sketches-12.jpg' },
-  { category: 'Sketches', image: '/works/sketches/sketches-14.jpg' },
-  { category: 'Sketches', image: '/works/sketches/sketches-15.jpg' },
   { category: 'Sketches', image: '/works/sketches/sketches-16.jpg' },
   { category: 'Sketches', image: '/works/sketches/sketches-17.jpg' },
   { category: 'Sketches', image: '/works/sketches/sketches-18.jpg' },
@@ -147,15 +133,15 @@ export const works = [
 
 // --- Editorial 3-up ---
 export const editorial = [
-  { title: 'Sketches', label: 'Έργα σε χαρτί', image: '/works/sketches/sketches-05.jpg', to: { path: '/works', query: { c: 'Sketches' } } },
+  { title: 'Sketches', label: 'Έργα σε χαρτί', image: '/works/sketches/sketches-23.jpg', to: { path: '/works', query: { c: 'Sketches' } } },
   { title: 'Creative items', label: 'Αντικείμενα & prints', image: '/works/items/items-04.jpg', to: { path: '/works', query: { c: 'Creative items' } } },
   { title: 'Pure art', label: 'Πίνακες', image: '/works/pure/pure-03.jpg', to: { path: '/works', query: { c: 'Pure art' } } },
 ]
 
 // --- Σχετικά (σελίδα /about) ---
 export const about = {
-  portrait: '/about/studio.jpg',
-  secondary: '/about/me.png',
+  portrait: '/about/me.png',
+  secondary: '/about/place.png',
   lead: 'Η Marina είναι creative designer με υπόβαθρο στην εσωτερική αρχιτεκτονική και πάθος για τη σύνθεση, το χρώμα και το visual storytelling.',
   paragraphs: [
     'Μέσα από τα art pieces και τα print pieces της εξερευνά παιχνιδιάρικες φόρμες, προσεγμένες λεπτομέρειες και εκφραστική αισθητική, δημιουργώντας έργα που είναι ταυτόχρονα σύγχρονα και προσωπικά.',
@@ -168,7 +154,7 @@ export const wordmark = {
   text: 'mie',
   letters: [
     { char: 'm', image: '/works/pure/pure-02.jpg',        position: '50% 42%' },
-    { char: 'i', image: '/works/sketches/sketches-04.jpg', position: '50% 40%' },
+    { char: 'i', image: '/works/sketches/sketches-34.jpg', position: '50% 40%' },
     { char: 'e', image: '/works/items/items-05.jpg',       position: '50% 50%' }
   ]
 }

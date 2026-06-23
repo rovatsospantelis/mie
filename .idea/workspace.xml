@@ -4,44 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde2a5fa-9c4e-4e2c-8d17-4c456fc7985c" name="Changes" comment="-Style changes">
-      <change afterPath="$PROJECT_DIR$/public/about/2 pure arts.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/about/me.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/about/place.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/pure/pure-13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/pure/pure-14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/sketches/sketches-16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/sketches/sketches-17.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/sketches/sketches-18.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/sketches/sketches-19.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/sketches/sketches-20.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/sketches/sketches-21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/sketches/sketches-22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/sketches/sketches-23.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/sketches/sketches-24.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/sketches/sketches-25.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/sketches/sketches-26.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/sketches/sketches-27.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/sketches/sketches-28.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/sketches/sketches-29.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/sketches/sketches-30.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/sketches/sketches-31.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/sketches/sketches-32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/sketches/sketches-33.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/sketches/sketches-34.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/sketches/sketches-35.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/sketches/sketches-36.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/sketches/sketches-37.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/sketches/sketches-38.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/sketches/sketches-39.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/sketches/sketches-40.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/sketches/sketches-41.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/sketches/sketches-42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/sketches/sketches-43.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/sketches/sketches-44.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/sketches/sketches-45.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/sketches/sketches-46.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/sketches/sketches-47.jpg" afterDir="false" />
+    <list default="true" id="bde2a5fa-9c4e-4e2c-8d17-4c456fc7985c" name="Changes" comment="-Pictures addition">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/content.js" afterDir="false" />
     </list>
@@ -160,7 +123,7 @@
       <workItem from="1781633128803" duration="9666000" />
       <workItem from="1781681023722" duration="9000" />
       <workItem from="1781698317897" duration="672000" />
-      <workItem from="1782138967625" duration="1600000" />
+      <workItem from="1782138967625" duration="3360000" />
     </task>
     <task id="LOCAL-00001" summary="-Pictures update">
       <option name="closed" value="true" />
@@ -258,7 +221,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781698977618</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="-Pictures addition">
+      <option name="closed" value="true" />
+      <created>1782140644074</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1782140644074</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,6 +255,7 @@
     <MESSAGE value="-correct error" />
     <MESSAGE value="-Style changes: update hero carousel, section addition" />
     <MESSAGE value="-Style changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="-Style changes" />
+    <MESSAGE value="-Pictures addition" />
+    <option name="LAST_COMMIT_MESSAGE" value="-Pictures addition" />
   </component>
 </project>

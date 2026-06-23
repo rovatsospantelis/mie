@@ -64,7 +64,7 @@ usePageSeo({
           </div>
           <div v-reveal="1" class="order-1 overflow-hidden md:order-2">
             <img :src="about.secondary" alt="Έκθεση / εγκατάσταση"
-                 class="aspect-[4/3] w-full object-cover" loading="lazy" />
+                 class="aspect-[3/3] w-full object-cover" loading="lazy" />
           </div>
         </div>
       </div>
