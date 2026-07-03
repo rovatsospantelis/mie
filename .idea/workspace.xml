@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde2a5fa-9c4e-4e2c-8d17-4c456fc7985c" name="Changes" comment="-Pictures edit" />
+    <list default="true" id="bde2a5fa-9c4e-4e2c-8d17-4c456fc7985c" name="Changes" comment="-Pictures edit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="132" />
+    <option name="cachedIndexableFilesCount" value="134" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Settings">
@@ -122,6 +124,8 @@
       <workItem from="1781698317897" duration="672000" />
       <workItem from="1782138967625" duration="3543000" />
       <workItem from="1782226735668" duration="1764000" />
+      <workItem from="1782234224734" duration="200000" />
+      <workItem from="1782374725188" duration="1018000" />
     </task>
     <task id="LOCAL-00001" summary="-Pictures update">
       <option name="closed" value="true" />
@@ -251,7 +255,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782228260644</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="-Pictures edit">
+      <option name="closed" value="true" />
+      <created>1782234392837</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1782234392838</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
