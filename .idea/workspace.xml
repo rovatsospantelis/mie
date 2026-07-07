@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde2a5fa-9c4e-4e2c-8d17-4c456fc7985c" name="Changes" comment="-Pictures edit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="bde2a5fa-9c4e-4e2c-8d17-4c456fc7985c" name="Changes" comment="-Pictures addition" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -126,6 +124,7 @@
       <workItem from="1782226735668" duration="1764000" />
       <workItem from="1782234224734" duration="200000" />
       <workItem from="1782374725188" duration="1018000" />
+      <workItem from="1783076103782" duration="839000" />
     </task>
     <task id="LOCAL-00001" summary="-Pictures update">
       <option name="closed" value="true" />
@@ -263,7 +262,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782234392838</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="-Pictures addition">
+      <option name="closed" value="true" />
+      <created>1783076207602</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1783076207602</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,8 +296,8 @@
     <MESSAGE value="-correct error" />
     <MESSAGE value="-Style changes: update hero carousel, section addition" />
     <MESSAGE value="-Style changes" />
-    <MESSAGE value="-Pictures addition" />
     <MESSAGE value="-Pictures edit" />
-    <option name="LAST_COMMIT_MESSAGE" value="-Pictures edit" />
+    <MESSAGE value="-Pictures addition" />
+    <option name="LAST_COMMIT_MESSAGE" value="-Pictures addition" />
   </component>
 </project>
