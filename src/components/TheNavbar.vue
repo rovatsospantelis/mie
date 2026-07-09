@@ -41,8 +41,8 @@ const workLinks = [
     label: 'Sketches'
   },
   {
-    to: { path: '/works', query: { c: 'Creative items' } },
-    label: 'Creative Items'
+    to: { path: '/works', query: { c: 'Items' } },
+    label: 'Items'
   },
   {
     to: { path: '/works', query: { c: 'Pure art' } },

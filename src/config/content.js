@@ -48,17 +48,17 @@ export const heroSlides = [
 
 // --- Feature banner ---
 export const feature = {
-  image: '/works/items/items-02.jpg',
-  eyebrow: 'Creative items',
-  title: 'Το «mie» γίνεται αντικείμενο',
-  text: 'Το μονόγραμμα ζει και ως χειροποίητο αντικείμενο — φόρμα, χρήση και χαρακτήρας σε ένα.',
-  cta: { label: 'Δείτε τα αντικείμενα', to: { path: '/works', query: { c: 'Creative items' } } },
+  image: '/works/items/items-02.png',
+  eyebrow: 'Items',
+  title: 'Η Τέχνη γίνεται αντικείμενο',
+  text: 'Έργα τέχνης γίνονται χρηστικά αντικείμενα.',
+  cta: { label: 'Δείτε τα αντικείμενα', to: { path: '/works', query: { c: 'Items' } } },
 }
 
 // --- Συλλογές / υπο-κατηγορίες (τα 3 υπο-tabs των Έργων) ---
 export const collections = [
   { title: 'Sketches', image: '/works/sketches/sketches-19.jpg', category: 'Sketches' },
-  { title: 'Creative items', image: '/works/items/items-02.jpg', category: 'Creative items' },
+  { title: 'Items', image: '/works/items/items-02.png', category: 'Items' },
   { title: 'Pure art', image: '/works/pure/pure-02.jpg', category: 'Pure art' },
 ]
 
@@ -97,23 +97,22 @@ export const works = [
   { category: 'Sketches', image: '/works/sketches/sketches-45.jpg' },
   { category: 'Sketches', image: '/works/sketches/sketches-46.jpg' },
   { category: 'Sketches', image: '/works/sketches/sketches-47.jpg' },
-  // Creative items — design αντικείμενα & print pieces
-  { category: 'Creative items', image: '/works/items/items-01.jpg' },
-  { category: 'Creative items', image: '/works/items/items-02.jpg' },
-  { category: 'Creative items', image: '/works/items/items-03.jpg' },
-  { category: 'Creative items', image: '/works/items/items-04.jpg' },
-  { category: 'Creative items', image: '/works/items/items-05.jpg' },
-  { category: 'Creative items', image: '/works/items/items-07.jpg' },
-  { category: 'Creative items', image: '/works/items/items-08.jpg' },
-  { category: 'Creative items', image: '/works/items/items-09.jpg' },
-  { category: 'Creative items', image: '/works/items/items-10.jpg' },
-  { category: 'Creative items', image: '/works/items/items-11.jpg' },
-  { category: 'Creative items', image: '/works/items/items-12.jpg' },
-  { category: 'Creative items', image: '/works/items/items-13.jpg' },
-  { category: 'Creative items', image: '/works/items/items-14.jpg' },
-  { category: 'Creative items', image: '/works/items/items-15.jpg' },
-  { category: 'Creative items', image: '/works/items/items-16.jpg' },
-  { category: 'Creative items', image: '/works/items/items-17.jpg' },
+  // Items — design αντικείμενα & print pieces
+  { category: 'Items', image: '/works/items/items-01.png' },
+  { category: 'Items', image: '/works/items/items-02.png' },
+  { category: 'Items', image: '/works/items/items-03.png' },
+  { category: 'Items', image: '/works/items/items-04.png' },
+  { category: 'Items', image: '/works/items/items-05.png' },
+  { category: 'Items', image: '/works/items/items-06.png' },
+  { category: 'Items', image: '/works/items/items-07.png' },
+  { category: 'Items', image: '/works/items/items-08.png' },
+  { category: 'Items', image: '/works/items/items-09.png' },
+  { category: 'Items', image: '/works/items/items-10.png' },
+  { category: 'Items', image: '/works/items/items-11.png' },
+  { category: 'Items', image: '/works/items/items-12.png' },
+  { category: 'Items', image: '/works/items/items-13.png' },
+  { category: 'Items', image: '/works/items/items-14.png' },
+  { category: 'Items', image: '/works/items/items-15.png' },
   // Pure art — πίνακες
   { category: 'Pure art', image: '/works/pure/pure-01.jpg' },
   { category: 'Pure art', image: '/works/pure/pure-02.jpg' },
@@ -140,7 +139,7 @@ export const works = [
 // --- Editorial 3-up ---
 export const editorial = [
   { title: 'Sketches', label: 'Έργα σε χαρτί', image: '/works/sketches/sketches-23.jpg', to: { path: '/works', query: { c: 'Sketches' } } },
-  { title: 'Creative items', label: 'Αντικείμενα & prints', image: '/works/items/items-04.jpg', to: { path: '/works', query: { c: 'Creative items' } } },
+  { title: 'Items', label: 'Αντικείμενα & prints', image: '/works/items/items-11.png', to: { path: '/works', query: { c: 'Items' } } },
   { title: 'Pure art', label: 'Πίνακες', image: '/works/pure/pure-03.jpg', to: { path: '/works', query: { c: 'Pure art' } } },
 ]
 
@@ -164,4 +163,3 @@ export const wordmark = {
     { char: 'e', image: '/works/items/items-05.jpg',       position: '50% 50%' }
   ]
 }
-

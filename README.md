@@ -33,7 +33,7 @@ npm run preview
 ## Έργα & εικόνες
 Τα έργα ζουν στο `public/works/<κατηγορία>/` και ορίζονται στο `src/config/content.js`:
 - `sketches/` → υπο-tab **Sketches** (έργα σε χαρτί / prints)
-- `items/` → υπο-tab **Creative items** (design αντικείμενα & print pieces)
+- `items/` → υπο-tab **Items** (design αντικείμενα & print pieces)
 - `pure/` → υπο-tab **Pure art** (πίνακες)
 
 Τα 3 υπο-tabs παράγονται αυτόματα από το `collections` array (πεδίο `category`).

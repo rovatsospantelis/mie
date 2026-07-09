@@ -8,7 +8,7 @@ import { works, collections } from '@/config/content'
 
 usePageSeo({
   title: `Έργα — ${site.name}`,
-  description: `Τα έργα της Μαρίνας Δούκα — sketches, creative items και pure art.`,
+  description: `Τα έργα της Μαρίνας Δούκα — sketches, items και pure art.`,
 })
 
 const route = useRoute()

@@ -13,7 +13,7 @@ usePageSeo({
 })
 
 const pick = (cat, n) => works.filter((w) => w.category === cat).slice(0, n)
-const featuredWorks = [...pick('Pure art', 2), ...pick('Creative items', 2), ...pick('Sketches', 2)]
+const featuredWorks = [...pick('Pure art', 2), ...pick('Items', 2), ...pick('Sketches', 2)]
 </script>
 
 <template>

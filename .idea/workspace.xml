@@ -4,14 +4,53 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde2a5fa-9c4e-4e2c-8d17-4c456fc7985c" name="Changes" comment="-Pictures addition" />
+    <list default="true" id="bde2a5fa-9c4e-4e2c-8d17-4c456fc7985c" name="Changes" comment="-Pictures addition">
+      <change afterPath="$PROJECT_DIR$/public/works/items/items-01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/items/items-02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/items/items-03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/items/items-04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/items/items-05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/items/items-06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/items/items-07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/items/items-08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/items/items-09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/items/items-10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/items/items-11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/items/items-12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/items/items-13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/items/items-14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/items/items-15.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/works/items/items-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/works/items/items-02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/works/items/items-03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/works/items/items-04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/works/items/items-05.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/works/items/items-07.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/works/items/items-08.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/works/items/items-09.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/works/items/items-10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/works/items/items-11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/works/items/items-12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/works/items/items-13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/works/items/items-14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/works/items/items-15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/works/items/items-16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/works/items/items-17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TheNavbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TheNavbar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WorksMosaic.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WorksMosaic.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/content.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomeView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/WorkView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/WorkView.vue" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="134" />
+    <option name="cachedIndexableFilesCount" value="138" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Settings">
@@ -42,37 +81,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/provatsos/Desktop/mie/public/works/pure&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev # http://localhost:5173.executor&quot;: &quot;Run&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/snap/intellij-idea-ultimate/738/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/provatsos/Desktop/mie/public/works/items",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev # http://localhost:5173.executor": "Run",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "/snap/intellij-idea-ultimate/738/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/works/items" />
       <recent name="$PROJECT_DIR$/public/works/pure" />
       <recent name="$PROJECT_DIR$/public/works/sketches" />
       <recent name="$PROJECT_DIR$/public/about" />
       <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/src/components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/logos" />
@@ -125,6 +164,8 @@
       <workItem from="1782234224734" duration="200000" />
       <workItem from="1782374725188" duration="1018000" />
       <workItem from="1783076103782" duration="839000" />
+      <workItem from="1783409568932" duration="876000" />
+      <workItem from="1783588398942" duration="1342000" />
     </task>
     <task id="LOCAL-00001" summary="-Pictures update">
       <option name="closed" value="true" />
@@ -270,7 +311,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783076207602</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="-Pictures addition">
+      <option name="closed" value="true" />
+      <created>1783409774510</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1783409774510</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

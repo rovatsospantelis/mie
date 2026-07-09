@@ -21,7 +21,7 @@ const pattern = [
   { type: 'image' },
   { type: 'text', tint: 'b', label: 'Sketches', text: 'Έργα σε χαρτί — γραμμή, φόρμα και χρώμα.', to: { path: '/works', query: { c: 'Sketches' } } },
   { type: 'image' },
-  { type: 'text', tint: 'c', label: 'Δείτε όλα τα έργα', text: 'Pure art, sketches & creative items.', to: '/works' },
+  { type: 'text', tint: 'c', label: 'Δείτε όλα τα έργα', text: 'Pure art, sketches & items.', to: '/works' },
   { type: 'image' },
   { type: 'image' },
 ]
