@@ -113,6 +113,13 @@ export const works = [
   { category: 'Items', image: '/works/items/items-13.png' },
   { category: 'Items', image: '/works/items/items-14.png' },
   { category: 'Items', image: '/works/items/items-15.png' },
+  { category: 'Items', image: '/works/items/items-16.png' },
+  { category: 'Items', image: '/works/items/items-17.png' },
+  { category: 'Items', image: '/works/items/items-18.png' },
+  { category: 'Items', image: '/works/items/items-19.png' },
+  { category: 'Items', image: '/works/items/items-20.png' },
+  { category: 'Items', image: '/works/items/items-21.png' },
+  { category: 'Items', image: '/works/items/items-22.png' },
   // Pure art — πίνακες
   { category: 'Pure art', image: '/works/pure/pure-01.jpg' },
   { category: 'Pure art', image: '/works/pure/pure-02.jpg' },
