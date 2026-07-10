@@ -92,7 +92,7 @@ export const works = [
   { category: 'Sketches', image: '/works/sketches/sketches-40.jpg' },
   { category: 'Sketches', image: '/works/sketches/sketches-41.jpg' },
   { category: 'Sketches', image: '/works/sketches/sketches-42.jpg' },
-  { category: 'Sketches', image: '/works/sketches/sketches-43.jpg' },
+
   { category: 'Sketches', image: '/works/sketches/sketches-44.jpg' },
   { category: 'Sketches', image: '/works/sketches/sketches-45.jpg' },
   { category: 'Sketches', image: '/works/sketches/sketches-46.jpg' },
@@ -103,7 +103,7 @@ export const works = [
   { category: 'Items', image: '/works/items/items-03.png' },
   { category: 'Items', image: '/works/items/items-04.png' },
   { category: 'Items', image: '/works/items/items-05.png' },
-  { category: 'Items', image: '/works/items/items-06.png' },
+
   { category: 'Items', image: '/works/items/items-07.png' },
   { category: 'Items', image: '/works/items/items-08.png' },
   { category: 'Items', image: '/works/items/items-09.png' },
@@ -112,14 +112,10 @@ export const works = [
   { category: 'Items', image: '/works/items/items-12.png' },
   { category: 'Items', image: '/works/items/items-13.png' },
   { category: 'Items', image: '/works/items/items-14.png' },
-  { category: 'Items', image: '/works/items/items-15.png' },
+
   { category: 'Items', image: '/works/items/items-16.png' },
   { category: 'Items', image: '/works/items/items-17.png' },
   { category: 'Items', image: '/works/items/items-18.png' },
-  { category: 'Items', image: '/works/items/items-19.png' },
-  { category: 'Items', image: '/works/items/items-20.png' },
-  { category: 'Items', image: '/works/items/items-21.png' },
-  { category: 'Items', image: '/works/items/items-22.png' },
   // Pure art — πίνακες
   { category: 'Pure art', image: '/works/pure/pure-01.jpg' },
   { category: 'Pure art', image: '/works/pure/pure-02.jpg' },
