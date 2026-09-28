@@ -77,8 +77,8 @@ onBeforeUnmount(() => {
     <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-3 md:px-6">
       <!-- Logo -->
       <RouterLink to="/" class="inline-block shrink-0" aria-label="mie — Αρχική">
-        <img src="/logo.png" alt="" aria-hidden="true" class="logo-light h-12 w-auto md:h-14" />
-        <img src="/logo-dark.png" alt="" aria-hidden="true" class="logo-dark h-12 w-auto md:h-14" />
+        <img src="/logo.png" alt="" aria-hidden="true" class="logo-light h-10 w-auto md:h-12" />
+        <img src="/logo-dark.png" alt="" aria-hidden="true" class="logo-dark h-10 w-auto md:h-12" />
       </RouterLink>
 
       <!-- Desktop nav -->
@@ -136,8 +136,8 @@ onBeforeUnmount(() => {
     >
       <div class="flex items-center justify-between border-b border-line px-6 py-5">
         <RouterLink to="/" aria-label="mie — Αρχική" @click="closeDrawer">
-          <img src="/logo.png" alt="" aria-hidden="true" class="logo-light h-12 w-auto" />
-          <img src="/logo-dark.png" alt="" aria-hidden="true" class="logo-dark h-12 w-auto" />
+          <img src="/logo.png" alt="" aria-hidden="true" class="logo-light h-10 w-auto" />
+          <img src="/logo-dark.png" alt="" aria-hidden="true" class="logo-dark h-10 w-auto" />
         </RouterLink>
 
         <button

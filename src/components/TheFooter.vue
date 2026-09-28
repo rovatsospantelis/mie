@@ -26,7 +26,7 @@ function dayLine(d) {
     >
       <!-- Brand -->
       <div>
-        <img src="/logo-dark.png" alt="mie" class="mx-auto h-20 w-auto md:mx-0" />
+        <img src="/logo-dark.png" alt="mie" class="mx-auto h-16 w-auto md:mx-0" />
         <p class="mt-4 font-display text-lg italic opacity-80">{{ site.tagline }}</p>
       </div>
 
