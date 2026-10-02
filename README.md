@@ -24,6 +24,8 @@ npm run preview
 | Παλέτα (light + dark) & fonts | `src/assets/main.css` (`@theme` / `html.dark`) + `index.html` |
 | Πλοήγηση (4 links → mobile tab bar) | `src/App.vue` → `navLinks` |
 | PWA manifest | `vite.config.js` |
+| **Αγγλικά** — κείμενα UI (μενού, κουμπιά, φόρμα, τίτλοι σελίδων) | `src/i18n/ui.js` |
+| Αγγλικά περιεχομένου: κάθε κείμενο είναι `{ el: '…', en: '…' }` | `src/config/content.js` |
 
 ## Γραμματοσειρές
 - **Display:** Cormorant (high-contrast serif, italic eyebrows) — με Greek subset

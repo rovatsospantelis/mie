@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde2a5fa-9c4e-4e2c-8d17-4c456fc7985c" name="Changes" comment="-Logo update" />
+    <list default="true" id="bde2a5fa-9c4e-4e2c-8d17-4c456fc7985c" name="Changes" comment="-WorkView updated to shuffle">
+      <change beforePath="$PROJECT_DIR$/src/config/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/content.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="145" />
+    <option name="cachedIndexableFilesCount" value="146" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Settings">
@@ -133,6 +135,7 @@
       <workItem from="1785581174445" duration="1269000" />
       <workItem from="1790587548586" duration="504000" />
       <workItem from="1790597708574" duration="3307000" />
+      <workItem from="1790925451400" duration="2717000" />
     </task>
     <task id="LOCAL-00001" summary="-Pictures update">
       <option name="closed" value="true" />
@@ -342,7 +345,23 @@
       <option name="project" value="LOCAL" />
       <updated>1790600390819</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="-Items soon, formspree, logo expansion">
+      <option name="closed" value="true" />
+      <created>1790926843312</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1790926843312</updated>
+    </task>
+    <task id="LOCAL-00028" summary="-WorkView updated to shuffle">
+      <option name="closed" value="true" />
+      <created>1790927482038</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1790927482038</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,6 +393,8 @@
     <MESSAGE value="-New Items and removals" />
     <MESSAGE value="-Add pure art" />
     <MESSAGE value="-Logo update" />
-    <option name="LAST_COMMIT_MESSAGE" value="-Logo update" />
+    <MESSAGE value="-Items soon, formspree, logo expansion" />
+    <MESSAGE value="-WorkView updated to shuffle" />
+    <option name="LAST_COMMIT_MESSAGE" value="-WorkView updated to shuffle" />
   </component>
 </project>

@@ -12,16 +12,21 @@ import {
 } from 'lucide-vue-next'
 
 import ThemeToggle from '@/components/ThemeToggle.vue'
+import LangToggle from '@/components/LangToggle.vue'
 import { site } from '@/config/site'
+import { useLang } from '@/composables/useLang'
+
+const { t } = useLang()
 
 const props = defineProps({
+  // label = κλειδί του src/i18n/ui.js
   links: {
     type: Array,
     default: () => [
-      { to: '/', label: 'Αρχική', icon: Home },
-      { to: '/works', label: 'Έργα', icon: LayoutGrid },
-      { to: '/about', label: 'Σχετικά', icon: User },
-      { to: '/contact', label: 'Επαφή', icon: Mail },
+      { to: '/', label: 'nav.home', icon: Home },
+      { to: '/works', label: 'nav.works', icon: LayoutGrid },
+      { to: '/about', label: 'nav.about', icon: User },
+      { to: '/contact', label: 'nav.contactShort', icon: Mail },
     ],
   },
 })
@@ -34,7 +39,7 @@ const worksOpen = ref(true)
 const workLinks = [
   {
     to: '/works',
-    label: 'Όλα τα έργα'
+    label: 'nav.allWorks'
   },
   {
     to: { path: '/works', query: { c: 'Sketches' } },
@@ -76,7 +81,7 @@ onBeforeUnmount(() => {
   <header class="sticky top-0 z-50 border-b border-line bg-bg/90 backdrop-blur">
     <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-3 md:px-6">
       <!-- Logo -->
-      <RouterLink to="/" class="inline-block shrink-0" aria-label="mie — Αρχική">
+      <RouterLink to="/" class="inline-block shrink-0" :aria-label="t('nav.homeAria')">
         <img src="/logo.png" alt="" aria-hidden="true" class="logo-light h-10 w-auto md:h-12" />
         <img src="/logo-dark.png" alt="" aria-hidden="true" class="logo-dark h-10 w-auto md:h-12" />
       </RouterLink>
@@ -90,11 +95,12 @@ onBeforeUnmount(() => {
                 exact-active-class="text-ink after:scale-x-100"
                 class="label relative pb-1 text-ink-soft transition-colors hover:text-ink after:absolute after:inset-x-0 after:bottom-0 after:h-px after:origin-center after:scale-x-0 after:bg-ink after:transition-transform after:duration-300 hover:after:scale-x-100"
             >
-              {{ l.label }}
+              {{ t(l.label) }}
             </RouterLink>
           </li>
 
-          <li>
+          <li class="flex items-center gap-2">
+            <LangToggle />
             <ThemeToggle v-if="site.features.darkMode" />
           </li>
         </ul>
@@ -102,12 +108,13 @@ onBeforeUnmount(() => {
 
       <!-- Mobile actions -->
       <div class="flex items-center gap-2 md:hidden">
+        <LangToggle />
         <ThemeToggle v-if="site.features.darkMode" />
 
         <button
             type="button"
             class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-line bg-surface text-ink shadow-sm transition hover:bg-accent/10"
-            aria-label="Άνοιγμα μενού"
+            :aria-label="t('nav.openMenu')"
             @click="openDrawer"
         >
           <Menu :size="22" :stroke-width="1.8" />
@@ -122,7 +129,7 @@ onBeforeUnmount(() => {
         v-if="drawerOpen"
         type="button"
         class="fixed inset-0 z-[60] bg-ink/35 backdrop-blur-[2px] md:hidden"
-        aria-label="Κλείσιμο μενού"
+        :aria-label="t('nav.closeMenu')"
         @click="closeDrawer"
     />
   </Transition>
@@ -135,7 +142,7 @@ onBeforeUnmount(() => {
         aria-label="Mobile menu"
     >
       <div class="flex items-center justify-between border-b border-line px-6 py-5">
-        <RouterLink to="/" aria-label="mie — Αρχική" @click="closeDrawer">
+        <RouterLink to="/" :aria-label="t('nav.homeAria')" @click="closeDrawer">
           <img src="/logo.png" alt="" aria-hidden="true" class="logo-light h-10 w-auto" />
           <img src="/logo-dark.png" alt="" aria-hidden="true" class="logo-dark h-10 w-auto" />
         </RouterLink>
@@ -143,7 +150,7 @@ onBeforeUnmount(() => {
         <button
             type="button"
             class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-line bg-surface text-ink transition hover:bg-accent/10"
-            aria-label="Κλείσιμο μενού"
+            :aria-label="t('nav.closeMenu')"
             @click="closeDrawer"
         >
           <X :size="22" :stroke-width="1.8" />
@@ -159,7 +166,7 @@ onBeforeUnmount(() => {
                 class="flex items-center gap-4 rounded-2xl px-4 py-3 text-ink-soft transition hover:bg-surface hover:text-ink"
             >
               <Home :size="21" :stroke-width="1.6" />
-              <span class="label text-sm">Αρχική</span>
+              <span class="label text-sm">{{ t('nav.home') }}</span>
             </RouterLink>
           </li>
 
@@ -172,7 +179,7 @@ onBeforeUnmount(() => {
             >
               <span class="flex items-center gap-4">
                 <LayoutGrid :size="21" :stroke-width="1.6" />
-                <span class="label text-sm">Έργα</span>
+                <span class="label text-sm">{{ t('nav.works') }}</span>
               </span>
 
               <ChevronDown
@@ -190,7 +197,7 @@ onBeforeUnmount(() => {
                       :to="item.to"
                       class="block rounded-xl px-3 py-2 text-sm text-ink-soft transition hover:bg-surface hover:text-ink"
                   >
-                    {{ item.label }}
+                    {{ t(item.label) }}
                   </RouterLink>
                 </li>
               </ul>
@@ -204,7 +211,7 @@ onBeforeUnmount(() => {
                 class="flex items-center gap-4 rounded-2xl px-4 py-3 text-ink-soft transition hover:bg-surface hover:text-ink"
             >
               <User :size="21" :stroke-width="1.6" />
-              <span class="label text-sm">Σχετικά</span>
+              <span class="label text-sm">{{ t('nav.about') }}</span>
             </RouterLink>
           </li>
 
@@ -215,7 +222,7 @@ onBeforeUnmount(() => {
                 class="flex items-center gap-4 rounded-2xl px-4 py-3 text-ink-soft transition hover:bg-surface hover:text-ink"
             >
               <Mail :size="21" :stroke-width="1.6" />
-              <span class="label text-sm">Επαφή</span>
+              <span class="label text-sm">{{ t('nav.contactShort') }}</span>
             </RouterLink>
           </li>
         </ul>
@@ -226,7 +233,7 @@ onBeforeUnmount(() => {
           mie
         </p>
         <p class="mt-2 text-sm text-ink-soft">
-          Ζωγραφιές, sketches και έργα τέχνης.
+          {{ t('nav.drawerNote') }}
         </p>
       </div>
     </aside>

@@ -2,26 +2,25 @@
 import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
 import { useRoute, useRouter, RouterLink } from 'vue-router'
 import { X, ChevronLeft, ChevronRight } from 'lucide-vue-next'
-import { site } from '@/config/site'
 import { usePageSeo } from '@/composables/useSeo'
+import { useLang } from '@/composables/useLang'
 import { works, collections, comingSoon } from '@/config/content'
 
-usePageSeo({
-  title: `Έργα — ${site.name}`,
-  description: `Τα έργα της Μαρίνας Δούκα — sketches, items και pure art.`,
-})
+usePageSeo('works')
+const { t, tr } = useLang()
 
 const route = useRoute()
 const router = useRouter()
 
-const categories = ['Όλα', ...collections.map((c) => c.category)]
+const ALL = 'all'
+const categories = [ALL, ...collections.map((c) => c.category)]
 
 function getCategoryFromRoute() {
   const c = Array.isArray(route.query.c) ? route.query.c[0] : route.query.c
 
   return c && categories.includes(c)
       ? c
-      : 'Όλα'
+      : ALL
 }
 
 const active = ref(getCategoryFromRoute())
@@ -38,7 +37,7 @@ function setCategory(cat) {
 
   router.replace({
     path: '/works',
-    query: cat === 'Όλα' ? {} : { c: cat },
+    query: cat === ALL ? {} : { c: cat },
   })
 }
 
@@ -57,7 +56,7 @@ function shuffle(arr) {
 const shuffledWorks = shuffle(works)
 
 const filtered = computed(() =>
-  active.value === 'Όλα' ? shuffledWorks : works.filter((w) => w.category === active.value)
+  active.value === ALL ? shuffledWorks : works.filter((w) => w.category === active.value)
 )
 
 // --- Lightbox ---
@@ -94,8 +93,8 @@ function onTouchEnd(e) {
     <section class="mx-auto max-w-6xl px-6 pt-14 pb-24 md:pt-16">
       <!-- Header -->
       <div class="text-center">
-        <p class="eyebrow text-xl md:text-2xl">Το χαρτοφυλάκιο</p>
-        <h1 class="mt-1 text-2xl md:text-4xl">Έργα</h1>
+        <p class="eyebrow text-xl md:text-2xl">{{ t('works.eyebrow') }}</p>
+        <h1 class="mt-1 text-2xl md:text-4xl">{{ t('works.title') }}</h1>
       </div>
 
       <!-- Filters (υπο-tabs) -->
@@ -109,18 +108,18 @@ function onTouchEnd(e) {
             ? 'border-b border-ink text-ink'
             : 'border-b border-transparent text-ink-soft hover:text-ink'"
         >
-          {{ cat }}
+          {{ cat === ALL ? t('works.all') : cat }}
         </button>
       </div>
 
       <!-- Σημείωμα «σύντομα διαθέσιμα» για κατηγορίες σε preview -->
       <div v-if="isSoon(active)" v-reveal
            class="mx-auto mt-12 max-w-2xl border border-line bg-bg-soft px-6 py-8 text-center md:px-10">
-        <p class="label text-accent">{{ comingSoon.eyebrow }}</p>
-        <h2 class="mt-3 text-2xl md:text-3xl">{{ comingSoon.title }}</h2>
-        <p class="mt-4 leading-relaxed text-ink-soft">{{ comingSoon.text }}</p>
+        <p class="label text-accent">{{ tr(comingSoon.eyebrow) }}</p>
+        <h2 class="mt-3 text-2xl md:text-3xl">{{ tr(comingSoon.title) }}</h2>
+        <p class="mt-4 leading-relaxed text-ink-soft">{{ tr(comingSoon.text) }}</p>
         <RouterLink :to="comingSoon.cta.to" class="link-cta label mt-6 inline-block">
-          {{ comingSoon.cta.label }}
+          {{ tr(comingSoon.cta.label) }}
         </RouterLink>
       </div>
 
@@ -139,10 +138,10 @@ function onTouchEnd(e) {
                  loading="lazy" />
             <span v-if="isSoon(w.category)"
                   class="label absolute left-3 top-3 bg-surface/90 px-2.5 py-1 text-[10px] text-accent-deep">
-              {{ comingSoon.badge }}
+              {{ tr(comingSoon.badge) }}
             </span>
           </div>
-          <div v-if="w.title || active === 'Όλα'" class="mt-3">
+          <div v-if="w.title || active === ALL" class="mt-3">
             <h3 v-if="w.title" class="text-xl">{{ w.title }}</h3>
             <p class="label text-[11px] text-ink-soft" :class="w.title && 'mt-1'">{{ w.category }}</p>
           </div>
@@ -150,7 +149,7 @@ function onTouchEnd(e) {
       </div>
 
       <p v-if="!filtered.length" class="mt-16 text-center text-ink-soft">
-        Δεν υπάρχουν έργα σε αυτή την κατηγορία ακόμη.
+        {{ t('works.empty') }}
       </p>
     </section>
 
@@ -163,12 +162,12 @@ function onTouchEnd(e) {
         @touchstart="onTouchStart"
         @touchend="onTouchEnd"
       >
-        <button @click="close" aria-label="Κλείσιμο"
+        <button @click="close" :aria-label="t('common.close')"
           class="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20">
           <X :size="22" />
         </button>
 
-        <button v-if="filtered.length > 1" @click="prev" aria-label="Προηγούμενο"
+        <button v-if="filtered.length > 1" @click="prev" :aria-label="t('common.prev')"
           class="absolute left-2 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 md:left-6">
           <ChevronLeft :size="26" />
         </button>
@@ -179,12 +178,12 @@ function onTouchEnd(e) {
           <figcaption class="mt-4 text-white">
             <p v-if="cur.title" class="font-display text-2xl">{{ cur.title }}</p>
             <p class="label mt-1 text-xs text-white/70">
-              {{ cur.category }}<template v-if="isSoon(cur.category)"> · {{ comingSoon.badge }}</template> · {{ idx + 1 }} / {{ filtered.length }}
+              {{ cur.category }}<template v-if="isSoon(cur.category)"> · {{ tr(comingSoon.badge) }}</template> · {{ idx + 1 }} / {{ filtered.length }}
             </p>
           </figcaption>
         </figure>
 
-        <button v-if="filtered.length > 1" @click="next" aria-label="Επόμενο"
+        <button v-if="filtered.length > 1" @click="next" :aria-label="t('common.next')"
           class="absolute right-2 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 md:right-6">
           <ChevronRight :size="26" />
         </button>

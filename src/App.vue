@@ -6,15 +6,18 @@ import WhatsAppButton from '@/components/WhatsAppButton.vue'
 import { site } from '@/config/site'
 import { useStructuredData } from '@/composables/useSeo'
 import BrandWordmark from '@/components/BrandWordmark.vue'
+import { useLang } from '@/composables/useLang'
+
+const { t } = useLang()
 
 // JSON-LD μία φορά για όλο το site
 useStructuredData()
 
 const navLinks = [
-  { to: '/', label: 'Αρχική', icon: Home },
-  { to: '/works', label: 'Έργα', icon: LayoutGrid },
-  { to: '/about', label: 'Σχετικά', icon: User },
-  { to: '/contact', label: 'Επικοινωνία', icon: Mail },
+  { to: '/', label: 'nav.home', icon: Home },
+  { to: '/works', label: 'nav.works', icon: LayoutGrid },
+  { to: '/about', label: 'nav.about', icon: User },
+  { to: '/contact', label: 'nav.contact', icon: Mail },
 ]
 </script>
 
@@ -41,8 +44,8 @@ const navLinks = [
       <rect x="7" y="2" width="10" height="20" rx="2" />
       <path d="M11 19h2" stroke-linecap="round" />
     </svg>
-    <p class="font-display text-2xl italic">Γύρισε τη συσκευή σου</p>
-    <p class="max-w-xs text-ink-soft">Καλύτερη εμπειρία σε κατακόρυφη προβολή 📱</p>
+    <p class="font-display text-2xl italic">{{ t('rotate.title') }}</p>
+    <p class="max-w-xs text-ink-soft">{{ t('rotate.text') }}</p>
   </div>
 </template>
 

@@ -2,6 +2,9 @@
 import { ref, onMounted } from 'vue'
 import { RouterLink } from 'vue-router'
 import { works } from '@/config/content'
+import { useLang } from '@/composables/useLang'
+
+const { tr } = useLang()
 
 /**
  * CollectionBand — split band (χρωματιστό panel + φωτο), full-width.
@@ -10,13 +13,16 @@ import { works } from '@/config/content'
  */
 const props = defineProps({
   eyebrow: { type: String, default: 'Pure art' },
-  heading: { type: String, default: 'Πρωτότυπα\nέργα τέχνης' },
+  // κείμενα: string ή { el, en }
+  heading: { type: [String, Object], default: () => ({ el: 'Πρωτότυπα\nέργα τέχνης', en: 'Original\nworks of art' }) },
   text: {
-    type: String,
-    default:
-        'Αφηρημένες συνθέσεις σε χρώμα και υφή — κάθε πίνακας ζωγραφισμένος στο χέρι, ένα και μοναδικό κομμάτι για τον χώρο σου.',
+    type: [String, Object],
+    default: () => ({
+      el: 'Αφηρημένες συνθέσεις σε χρώμα και υφή — κάθε πίνακας ζωγραφισμένος στο χέρι, ένα και μοναδικό κομμάτι για τον χώρο σου.',
+      en: 'Abstract compositions in colour and texture — each painting made by hand, a one-of-a-kind piece for your space.',
+    }),
   },
-  buttonLabel: { type: String, default: 'Δείτε τη συλλογή' },
+  buttonLabel: { type: [String, Object], default: () => ({ el: 'Δείτε τη συλλογή', en: 'View the collection' }) },
   to: { type: [String, Object], default: () => ({ path: '/works', query: { c: 'Pure art' } }) },
   category: { type: String, default: 'Pure art' },
   image: { type: String, default: '/works/pure/pure-05.jpg' }, // override· αλλιώς τυχαία από category
@@ -41,14 +47,14 @@ onMounted(() => {
     >
       <p v-if="eyebrow" class="label text-white/55">{{ eyebrow }}</p>
       <h2 class="mt-4 whitespace-pre-line font-display text-4xl leading-[1.08] text-white md:text-5xl">
-        {{ heading }}
+        {{ tr(heading) }}
       </h2>
-      <p v-if="text" class="mt-5 max-w-md leading-relaxed text-white/75">{{ text }}</p>
+      <p v-if="text" class="mt-5 max-w-md leading-relaxed text-white/75">{{ tr(text) }}</p>
       <RouterLink
           :to="to"
           class="mt-9 inline-block w-fit bg-white px-9 py-4 text-center text-xs font-medium uppercase tracking-[0.18em] text-ink transition-colors hover:bg-white/90"
       >
-        {{ buttonLabel }}
+        {{ tr(buttonLabel) }}
       </RouterLink>
     </div>
 

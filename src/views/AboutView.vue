@@ -1,13 +1,11 @@
 <script setup>
 import { RouterLink } from 'vue-router'
-import { site } from '@/config/site'
 import { usePageSeo } from '@/composables/useSeo'
+import { useLang } from '@/composables/useLang'
 import { about } from '@/config/content'
 
-usePageSeo({
-  title: `Σχετικά — ${site.name}`,
-  description: `Η Μαρίνα Δούκα — creative designer με υπόβαθρο στην εσωτερική αρχιτεκτονική. Art pieces & print pieces.`,
-})
+usePageSeo('about')
+const { t, tr } = useLang()
 </script>
 
 <template>
@@ -16,17 +14,17 @@ usePageSeo({
     <section class="mx-auto max-w-6xl px-6 pt-14 pb-16 md:pt-16 md:pb-20">
       <div class="grid items-center gap-10 md:grid-cols-2 md:gap-16">
         <div v-reveal class="overflow-hidden">
-          <img :src="about.portrait" alt="Η Μαρίνα Δούκα στο εργαστήριο"
+          <img :src="about.portrait" :alt="t('about.portraitAlt')"
                class="aspect-[4/5] w-full object-cover" loading="lazy" />
         </div>
         <div v-reveal="1">
-          <p class="eyebrow text-xl md:text-2xl">Το εργαστήριο</p>
+          <p class="eyebrow text-xl md:text-2xl">{{ t('about.eyebrow') }}</p>
           <h1 class="mt-3 text-2xl md:text-4xl">
-            <span class="brush">Μαρίνα Δούκα</span>
+            <span class="brush">{{ t('about.name') }}</span>
           </h1>
           <br>
           <p class="space-y-6 text-lg leading-relaxed text-ink-soft">
-            {{ about.lead }}
+            {{ tr(about.lead) }}
           </p>
         </div>
       </div>
@@ -36,14 +34,14 @@ usePageSeo({
     <section class="border-t border-line">
       <div class="mx-auto max-w-2xl px-6 py-16 md:py-20">
         <div class="space-y-6 text-lg leading-relaxed text-ink-soft" v-reveal>
-          <p v-for="(p, i) in about.paragraphs" :key="i">{{ p }}</p>
+          <p v-for="(p, i) in about.paragraphs" :key="i">{{ tr(p) }}</p>
         </div>
 
         <!-- Focus areas -->
         <ul class="mt-10 flex flex-wrap gap-x-3 gap-y-3" v-reveal="1">
-          <li v-for="f in about.focus" :key="f"
+          <li v-for="(f, i) in about.focus" :key="i"
               class="label border border-line px-4 py-2 text-ink-soft">
-            {{ f }}
+            {{ tr(f) }}
           </li>
         </ul>
       </div>
@@ -54,16 +52,13 @@ usePageSeo({
       <div class="mx-auto max-w-6xl px-6 py-16 md:py-20">
         <div class="grid items-center gap-10 md:grid-cols-2 md:gap-16">
           <div v-reveal class="order-2 md:order-1">
-            <p class="eyebrow text-xl md:text-2xl">Στο στούντιο</p>
-            <h2 class="mt-2 text-3xl md:text-4xl">Από το σχέδιο στο αντικείμενο</h2>
-            <p class="mt-5 leading-relaxed text-ink-soft">
-              Ζωγραφική, prints και χειροποίητα αντικείμενα — όλα ξεκινούν από το ίδιο
-              λεξιλόγιο χρώματος και φόρμας.
-            </p>
-            <RouterLink to="/works" class="link-cta label mt-6 inline-block">Δείτε τα έργα</RouterLink>
+            <p class="eyebrow text-xl md:text-2xl">{{ t('about.studioEyebrow') }}</p>
+            <h2 class="mt-2 text-3xl md:text-4xl">{{ t('about.studioTitle') }}</h2>
+            <p class="mt-5 leading-relaxed text-ink-soft">{{ t('about.studioText') }}</p>
+            <RouterLink to="/works" class="link-cta label mt-6 inline-block">{{ t('about.studioCta') }}</RouterLink>
           </div>
           <div v-reveal="1" class="order-1 overflow-hidden md:order-2">
-            <img :src="about.secondary" alt="Έκθεση / εγκατάσταση"
+            <img :src="about.secondary" :alt="t('about.studioAlt')"
                  class="aspect-[3/3] w-full object-cover" loading="lazy" />
           </div>
         </div>
@@ -73,9 +68,9 @@ usePageSeo({
     <!-- CTA -->
     <section class="border-t border-line">
       <div class="mx-auto max-w-3xl px-6 py-16 text-center">
-        <h2 class="text-3xl md:text-4xl">Ας συνεργαστούμε</h2>
-        <p class="mt-3 text-ink-soft">Για παραγγελίες, συνεργασίες και custom αντικείμενα.</p>
-        <RouterLink to="/contact" class="btn btn-primary mt-7">Επικοινωνία</RouterLink>
+        <h2 class="text-3xl md:text-4xl">{{ t('about.ctaTitle') }}</h2>
+        <p class="mt-3 text-ink-soft">{{ t('about.ctaText') }}</p>
+        <RouterLink to="/contact" class="btn btn-primary mt-7">{{ t('nav.contact') }}</RouterLink>
       </div>
     </section>
   </div>

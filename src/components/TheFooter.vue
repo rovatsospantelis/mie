@@ -1,6 +1,9 @@
 <script setup>
 import { Instagram, Facebook } from 'lucide-vue-next'
 import { site } from '@/config/site'
+import { useLang } from '@/composables/useLang'
+
+const { t } = useLang()
 
 const year = new Date().getFullYear()
 const c = site.contact
@@ -27,12 +30,12 @@ function dayLine(d) {
       <!-- Brand -->
       <div>
         <img src="/logo-dark.png" alt="mie" class="mx-auto h-16 w-auto md:mx-0" />
-        <p class="mt-4 font-display text-lg italic opacity-80">{{ site.tagline }}</p>
+        <p class="mt-4 font-display text-lg italic opacity-80">{{ t('about.name') }} — creative designer</p>
       </div>
 
       <!-- Contact -->
       <div class="text-sm">
-        <p class="label">Επικοινωνία</p>
+        <p class="label">{{ t('footer.contact') }}</p>
         <div class="mt-3 space-y-1.5 opacity-80">
           <p v-if="c.address.street">{{ c.address.street }}, {{ c.address.area }}</p>
           <p v-if="c.phone"><a :href="'tel:' + c.phoneRaw" class="hover:opacity-100">{{ c.phone }}</a></p>
@@ -53,7 +56,7 @@ function dayLine(d) {
 
       <!-- Social -->
       <div v-if="s.instagram || s.tiktok || s.facebook" class="text-sm">
-        <p class="label">Ακολουθήστε μας</p>
+        <p class="label">{{ t('footer.follow') }}</p>
         <div class="mt-3 flex justify-center gap-3 md:justify-start">
           <a v-if="s.instagram" :href="s.instagram" target="_blank" rel="noopener" aria-label="Instagram"
              class="social-icon flex h-11 w-11 items-center justify-center rounded-full border">

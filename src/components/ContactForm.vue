@@ -3,6 +3,9 @@ import { ref } from 'vue'
 import { Send, Check } from 'lucide-vue-next'
 import { trackContact } from '@/utils/track'
 import { site } from '@/config/site'
+import { useLang } from '@/composables/useLang'
+
+const { t } = useLang()
 
 /**
  * ContactForm — φόρμα επικοινωνίας μέσω Formspree.
@@ -34,13 +37,13 @@ function fail(msg) {
 async function submit() {
   const f = form.value
   if (!f.name.trim() || !f.email.trim() || !f.message.trim()) {
-    return fail('Συμπλήρωσε όνομα, email και μήνυμα.')
+    return fail(t('form.errRequired'))
   }
   if (!emailRe.test(f.email.trim())) {
-    return fail('Το email δεν φαίνεται σωστό.')
+    return fail(t('form.errEmail'))
   }
   if (!props.endpoint) {
-    return fail('Η φόρμα δεν έχει ρυθμιστεί ακόμα (λείπει endpoint).')
+    return fail(t('form.errEndpoint'))
   }
 
   status.value = 'sending'
@@ -65,9 +68,9 @@ async function submit() {
     }
     const data = await res.json().catch(() => ({}))
     const detail = data.errors?.map((e) => e.message).join(' ')
-    fail(detail || 'Κάτι πήγε στραβά. Δοκίμασε ξανά ή στείλε email απευθείας.')
+    fail(detail || t('form.errGeneric'))
   } catch (e) {
-    fail('Δεν ήταν δυνατή η αποστολή. Έλεγξε τη σύνδεσή σου ή στείλε email απευθείας.')
+    fail(t('form.errNetwork'))
   }
 }
 </script>
@@ -77,30 +80,30 @@ async function submit() {
     <span class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-accent/10 text-accent-deep">
       <Check :size="28" :stroke-width="2" />
     </span>
-    <h3 class="mt-4 text-2xl font-bold">Το μήνυμα στάλθηκε</h3>
-    <p class="mt-2 text-ink-soft">Θα επικοινωνήσουμε μαζί σου σύντομα.</p>
+    <h3 class="mt-4 text-2xl font-bold">{{ t('form.successTitle') }}</h3>
+    <p class="mt-2 text-ink-soft">{{ t('form.successText') }}</p>
   </div>
 
   <form v-else class="space-y-4" novalidate @submit.prevent="submit">
     <div class="grid gap-4 sm:grid-cols-2">
       <div>
-        <label for="cf-name" class="text-sm font-medium">Όνομα *</label>
+        <label for="cf-name" class="text-sm font-medium">{{ t('form.name') }}</label>
         <input id="cf-name" v-model="form.name" type="text" name="name" autocomplete="name" required
           class="mt-1.5 w-full rounded-xl border border-line bg-surface px-4 py-3 text-ink outline-none transition-colors focus:border-accent-deep" />
       </div>
       <div>
-        <label for="cf-email" class="text-sm font-medium">Email *</label>
+        <label for="cf-email" class="text-sm font-medium">{{ t('form.email') }}</label>
         <input id="cf-email" v-model="form.email" type="email" name="email" autocomplete="email" required
           class="mt-1.5 w-full rounded-xl border border-line bg-surface px-4 py-3 text-ink outline-none transition-colors focus:border-accent-deep" />
       </div>
     </div>
     <div>
-      <label for="cf-phone" class="text-sm font-medium">Τηλέφωνο</label>
+      <label for="cf-phone" class="text-sm font-medium">{{ t('form.phone') }}</label>
       <input id="cf-phone" v-model="form.phone" type="tel" name="phone" autocomplete="tel"
         class="mt-1.5 w-full rounded-xl border border-line bg-surface px-4 py-3 text-ink outline-none transition-colors focus:border-accent-deep" />
     </div>
     <div>
-      <label for="cf-message" class="text-sm font-medium">Μήνυμα *</label>
+      <label for="cf-message" class="text-sm font-medium">{{ t('form.message') }}</label>
       <textarea id="cf-message" v-model="form.message" name="message" rows="5" required
         class="mt-1.5 w-full rounded-xl border border-line bg-surface px-4 py-3 text-ink outline-none transition-colors focus:border-accent-deep"></textarea>
     </div>
@@ -114,7 +117,7 @@ async function submit() {
     <button type="submit" :disabled="status === 'sending'"
       class="btn btn-solid w-full sm:w-auto">
       <Send :size="18" :stroke-width="1.8" />
-      {{ status === 'sending' ? 'Αποστολή…' : 'Στείλε μήνυμα' }}
+      {{ status === 'sending' ? t('form.sending') : t('form.send') }}
     </button>
   </form>
 </template>

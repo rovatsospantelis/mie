@@ -2,8 +2,10 @@
 import { Sun, Moon } from 'lucide-vue-next'
 import { useTheme } from '@/composables/useTheme'
 import { site } from '@/config/site'
+import { useLang } from '@/composables/useLang'
 
 const { isDark, toggle } = useTheme()
+const { t } = useLang()
 
 function onToggle() {
   toggle()
@@ -19,7 +21,7 @@ function onToggle() {
 <template>
   <button
     @click="onToggle"
-    :aria-label="isDark ? 'Φωτεινό θέμα' : 'Σκοτεινό θέμα'"
+    :aria-label="isDark ? t('theme.light') : t('theme.dark')"
     :data-tip="isDark ? 'Lux' : 'Tenebras'"
     class="tl-toggle flex h-9 w-9 items-center justify-center rounded-full border border-line text-ink-soft transition-colors hover:border-ink hover:text-ink md:h-10 md:w-10"
   >

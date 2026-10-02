@@ -1,6 +1,9 @@
 <script setup>
 import { ref, onMounted, onUnmounted, computed } from 'vue'
 import { ChevronLeft, ChevronRight } from 'lucide-vue-next'
+import { useLang } from '@/composables/useLang'
+
+const { t, tr } = useLang()
 
 const props = defineProps({
   slides: { type: Array, default: () => [] },
@@ -90,7 +93,7 @@ const current = computed(() => props.slides[index.value])
         >
           <img
             :src="s.image"
-            :alt="s.title"
+            :alt="tr(s.title)"
             class="h-full w-full object-cover"
             :loading="i === 0 ? 'eager' : 'lazy'"
             :fetchpriority="i === 0 ? 'high' : 'auto'"
@@ -104,17 +107,17 @@ const current = computed(() => props.slides[index.value])
         <div class="mx-auto w-full max-w-6xl px-6 pb-16 md:pb-0">
           <transition name="rise" mode="out-in">
             <div :key="index" class="max-w-xl text-white">
-              <p v-if="current.eyebrow" class="label text-white/80">{{ current.eyebrow }}</p>
-              <h1 class="mt-3 text-3xl font-medium md:text-5xl">{{ current.title }}</h1>
+              <p v-if="current.eyebrow" class="label text-white/80">{{ tr(current.eyebrow) }}</p>
+              <h1 class="mt-3 text-3xl font-medium md:text-5xl">{{ tr(current.title) }}</h1>
               <p v-if="current.text" class="mt-4 max-w-md text-base text-white/85 md:text-lg">
-                {{ current.text }}
+                {{ tr(current.text) }}
               </p>
               <RouterLink
                 v-if="current.cta"
                 :to="current.cta.to"
                 class="link-cta label mt-7 inline-block text-white"
               >
-                {{ current.cta.label }}
+                {{ tr(current.cta.label) }}
               </RouterLink>
             </div>
           </transition>
@@ -125,7 +128,7 @@ const current = computed(() => props.slides[index.value])
       <button
         v-if="slides.length > 1"
         @click="prev"
-        aria-label="Προηγούμενο"
+        :aria-label="t('common.prev')"
         class="absolute left-4 top-1/2 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 text-white/90 backdrop-blur-sm transition-colors hover:bg-white/15 md:flex"
       >
         <ChevronLeft :size="22" />
@@ -133,7 +136,7 @@ const current = computed(() => props.slides[index.value])
       <button
         v-if="slides.length > 1"
         @click="next"
-        aria-label="Επόμενο"
+        :aria-label="t('common.next')"
         class="absolute right-4 top-1/2 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 text-white/90 backdrop-blur-sm transition-colors hover:bg-white/15 md:flex"
       >
         <ChevronRight :size="22" />

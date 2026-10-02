@@ -1,18 +1,21 @@
+import { computed } from 'vue'
 import { useHead } from '@unhead/vue'
 import { site } from '@/config/site'
+import { useLang } from '@/composables/useLang'
 
 /**
- * usePageSeo — per-page title + description.
+ * usePageSeo — per-page title + description, στη γλώσσα που είναι επιλεγμένη.
+ * Τα κείμενα ζουν στο src/i18n/ui.js ως '<page>.seoTitle' / '<page>.seoDescription'.
  * Τα OG defaults ζουν στο index.html (για no-JS crawlers).
  *
  * Χρήση μέσα σε <script setup>:
- *   usePageSeo({ title: 'Υπηρεσίες — …', description: '…' })
+ *   usePageSeo('works')
  */
-export function usePageSeo({ title, description }) {
-  const fullTitle = title ? `${title}` : site.name
+export function usePageSeo(page) {
+  const { t } = useLang()
   useHead({
-    title: fullTitle,
-    meta: description ? [{ name: 'description', content: description }] : [],
+    title: computed(() => t(`${page}.seoTitle`)),
+    meta: [{ name: 'description', content: computed(() => t(`${page}.seoDescription`)) }],
   })
 }
 

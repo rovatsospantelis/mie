@@ -4,6 +4,8 @@
  *  ΣΗΜΕΙΩΣΗ: τα works δεν έχουν τίτλους/διαστάσεις ακόμη.
  *  Πρόσθεσε προαιρετικά  title: '...'  ή/και  caption: '...'
  *  σε όποιο έργο θες — το UI τα δείχνει αυτόματα αν υπάρχουν.
+ *
+ *  ΓΛΩΣΣΕΣ: τα κείμενα είναι { el: '…', en: '…' }. Απλό string = ίδιο και στις δύο.
  * ============================================================
  */
 
@@ -12,37 +14,37 @@ export const heroSlides = [
   {
     image: '/works/pure/pure-04.jpg',
     eyebrow: 'Pure art',
-    title: 'Πίνακες',
-    text: 'Αφηρημένες συνθέσεις σε χρώμα και υφή.',
-    cta: { label: 'Δείτε τους πίνακες', to: { path: '/works', query: { c: 'Pure art' } } },
+    title: { el: 'Πίνακες', en: 'Paintings' },
+    text: { el: 'Αφηρημένες συνθέσεις σε χρώμα και υφή.', en: 'Abstract compositions in colour and texture.' },
+    cta: { label: { el: 'Δείτε τους πίνακες', en: 'View the paintings' }, to: { path: '/works', query: { c: 'Pure art' } } },
   },
   {
     image: '/works/pure/pure-02.jpg',
     eyebrow: 'Pure art',
-    title: 'Χρώμα & φόρμα',
-    text: 'Art pieces και print pieces με χαρακτήρα και προσωπική ταυτότητα.',
-    cta: { label: 'Δείτε τα έργα', to: '/works' },
+    title: { el: 'Χρώμα & φόρμα', en: 'Colour & form' },
+    text: { el: 'Art pieces και print pieces με χαρακτήρα και προσωπική ταυτότητα.', en: 'Art pieces and print pieces with character and a personal identity.' },
+    cta: { label: { el: 'Δείτε τα έργα', en: 'View the works' }, to: '/works' },
   },
   {
     image: '/works/pure/pure-01.jpg',
     eyebrow: 'Pure art',
-    title: 'Πίνακες',
-    text: 'Αφηρημένες συνθέσεις σε χρώμα και υφή.',
-    cta: { label: 'Δείτε τους πίνακες', to: { path: '/works', query: { c: 'Pure art' } } },
+    title: { el: 'Πίνακες', en: 'Paintings' },
+    text: { el: 'Αφηρημένες συνθέσεις σε χρώμα και υφή.', en: 'Abstract compositions in colour and texture.' },
+    cta: { label: { el: 'Δείτε τους πίνακες', en: 'View the paintings' }, to: { path: '/works', query: { c: 'Pure art' } } },
   },
   {
     image: '/works/pure/pure-06.jpg',
     eyebrow: 'Pure art',
-    title: 'Πίνακες',
-    text: 'Αφηρημένες συνθέσεις σε χρώμα και υφή.',
-    cta: { label: 'Δείτε τους πίνακες', to: { path: '/works', query: { c: 'Pure art' } } },
+    title: { el: 'Πίνακες', en: 'Paintings' },
+    text: { el: 'Αφηρημένες συνθέσεις σε χρώμα και υφή.', en: 'Abstract compositions in colour and texture.' },
+    cta: { label: { el: 'Δείτε τους πίνακες', en: 'View the paintings' }, to: { path: '/works', query: { c: 'Pure art' } } },
   },
   {
     image: '/about/place.png',
-    eyebrow: 'Εργαστήριο',
-    title: 'Στο στούντιο',
-    text: 'Από το σχέδιο στο αντικείμενο — όλα γίνονται με το χέρι.',
-    cta: { label: 'Γνωρίστε με', to: '/about' },
+    eyebrow: { el: 'Εργαστήριο', en: 'Studio' },
+    title: { el: 'Στο στούντιο', en: 'In the studio' },
+    text: { el: 'Από το σχέδιο στο αντικείμενο — όλα γίνονται με το χέρι.', en: 'From sketch to object — everything is made by hand.' },
+    cta: { label: { el: 'Γνωρίστε με', en: 'Meet me' }, to: '/about' },
   },
 ]
 
@@ -51,29 +53,38 @@ export const heroSlides = [
 // Όταν τα Items βγουν προς πώληση: άδειασε το categories → [] και άλλαξε το feature πιο κάτω.
 export const comingSoon = {
   categories: ['Items'],
-  badge: 'Σύντομα',
-  eyebrow: 'Νέα συλλογή · Σύντομα διαθέσιμη',
-  title: 'Τα αντικείμενα ετοιμάζονται',
-  text: 'Τα κομμάτια που βλέπετε είναι μια πρώτη ματιά στη συλλογή, που ολοκληρώνεται αυτή την περίοδο στο εργαστήριο. Θέλετε να μάθετε πρώτοι πότε θα είναι διαθέσιμα ή να κρατήσετε κάποιο;',
-  cta: { label: 'Ενημερωθείτε πρώτοι', to: { path: '/contact', query: { topic: 'items' } } },
+  badge: { el: 'Σύντομα', en: 'Coming soon' },
+  eyebrow: { el: 'Νέα συλλογή · Σύντομα διαθέσιμη', en: 'New collection · Coming soon' },
+  title: { el: 'Τα αντικείμενα ετοιμάζονται', en: 'The objects are on their way' },
+  text: {
+    el: 'Τα κομμάτια που βλέπετε είναι μια πρώτη ματιά στη συλλογή, που ολοκληρώνεται αυτή την περίοδο στο εργαστήριο. Θέλετε να μάθετε πρώτοι πότε θα είναι διαθέσιμα ή να κρατήσετε κάποιο;',
+    en: 'The pieces you see are a first look at a collection currently being completed in the studio. Would you like to be the first to know when they become available, or reserve one?',
+  },
+  cta: { label: { el: 'Ενημερωθείτε πρώτοι', en: 'Be the first to know' }, to: { path: '/contact', query: { topic: 'items' } } },
   // προσυμπληρωμένο μήνυμα στη φόρμα όταν έρχονται από το παραπάνω CTA
-  message: 'Γεια σας! Θα ήθελα να ενημερωθώ όταν η συλλογή αντικειμένων είναι διαθέσιμη.',
+  message: {
+    el: 'Γεια σας! Θα ήθελα να ενημερωθώ όταν η συλλογή αντικειμένων είναι διαθέσιμη.',
+    en: 'Hello! I would like to be notified when the collection of objects becomes available.',
+  },
 }
 
 // --- Feature banner ---
 export const feature = {
   image: '/works/items/items-02.png',
-  eyebrow: 'Items · Σύντομα',
-  title: 'Η Τέχνη γίνεται αντικείμενο',
-  text: 'Έργα τέχνης γίνονται χρηστικά αντικείμενα. Η συλλογή ολοκληρώνεται στο εργαστήριο — δείτε μια πρώτη ματιά.',
-  cta: { label: 'Μια πρώτη ματιά', to: { path: '/works', query: { c: 'Items' } } },
+  eyebrow: { el: 'Items · Σύντομα', en: 'Items · Coming soon' },
+  title: { el: 'Η Τέχνη γίνεται αντικείμενο', en: 'Art becomes object' },
+  text: {
+    el: 'Έργα τέχνης γίνονται χρηστικά αντικείμενα. Η συλλογή ολοκληρώνεται στο εργαστήριο — δείτε μια πρώτη ματιά.',
+    en: 'Works of art become everyday objects. The collection is being completed in the studio — take a first look.',
+  },
+  cta: { label: { el: 'Μια πρώτη ματιά', en: 'Take a first look' }, to: { path: '/works', query: { c: 'Items' } } },
 }
 
 // --- Συλλογές / υπο-κατηγορίες (τα 3 υπο-tabs των Έργων) ---
 export const collections = [
+  { title: 'Pure art', image: '/works/pure/pure-02.jpg', category: 'Pure art' },
   { title: 'Sketches', image: '/works/sketches/sketches-19.jpg', category: 'Sketches' },
   { title: 'Items', image: '/works/items/items-02.png', category: 'Items' },
-  { title: 'Pure art', image: '/works/pure/pure-02.jpg', category: 'Pure art' },
 ]
 
 // --- Έργα (grid + lightbox) ---
@@ -162,21 +173,30 @@ export const works = [
 
 // --- Editorial 3-up ---
 export const editorial = [
-  { title: 'Sketches', label: 'Έργα σε χαρτί', image: '/works/sketches/sketches-23.jpg', to: { path: '/works', query: { c: 'Sketches' } } },
-  { title: 'Items', label: 'Αντικείμενα · Σύντομα', image: '/works/items/items-11.png', to: { path: '/works', query: { c: 'Items' } } },
-  { title: 'Pure art', label: 'Πίνακες', image: '/works/pure/pure-03.jpg', to: { path: '/works', query: { c: 'Pure art' } } },
+  { title: 'Sketches', label: { el: 'Έργα σε χαρτί', en: 'Works on paper' }, image: '/works/sketches/sketches-23.jpg', to: { path: '/works', query: { c: 'Sketches' } } },
+  { title: 'Items', label: { el: 'Αντικείμενα · Σύντομα', en: 'Objects · Coming soon' }, image: '/works/items/items-11.png', to: { path: '/works', query: { c: 'Items' } } },
+  { title: 'Pure art', label: { el: 'Πίνακες', en: 'Paintings' }, image: '/works/pure/pure-03.jpg', to: { path: '/works', query: { c: 'Pure art' } } },
 ]
 
 // --- Σχετικά (σελίδα /about) ---
 export const about = {
   portrait: '/about/me.png',
   secondary: '/about/place.png',
-  lead: 'Η Marina είναι creative designer με υπόβαθρο στην εσωτερική αρχιτεκτονική και πάθος για τη σύνθεση, το χρώμα και το visual storytelling.',
+  lead: {
+    el: 'Η Marina είναι creative designer με υπόβαθρο στην εσωτερική αρχιτεκτονική και πάθος για τη σύνθεση, το χρώμα και το visual storytelling.',
+    en: 'Marina is a creative designer with a background in interior architecture and a passion for composition, colour and visual storytelling.',
+  },
   paragraphs: [
-    'Μέσα από τα art pieces και τα print pieces της εξερευνά παιχνιδιάρικες φόρμες, προσεγμένες λεπτομέρειες και εκφραστική αισθητική, δημιουργώντας έργα που είναι ταυτόχρονα σύγχρονα και προσωπικά.',
-    'Η δουλειά της ισορροπεί ανάμεσα στο σύγχρονο design και την καλλιτεχνική έκφραση — με στόχο να δίνει μορφή σε αντικείμενα και εικόνες με αισθητική, χαρακτήρα και ταυτότητα.',
+    {
+      el: 'Μέσα από τα art pieces και τα print pieces της εξερευνά παιχνιδιάρικες φόρμες, προσεγμένες λεπτομέρειες και εκφραστική αισθητική, δημιουργώντας έργα που είναι ταυτόχρονα σύγχρονα και προσωπικά.',
+      en: 'Through her art pieces and print pieces she explores playful forms, careful detail and an expressive aesthetic, creating works that are both contemporary and personal.',
+    },
+    {
+      el: 'Η δουλειά της ισορροπεί ανάμεσα στο σύγχρονο design και την καλλιτεχνική έκφραση — με στόχο να δίνει μορφή σε αντικείμενα και εικόνες με αισθητική, χαρακτήρα και ταυτότητα.',
+      en: 'Her work balances contemporary design and artistic expression — giving shape to objects and images with aesthetic, character and identity.',
+    },
   ],
-  focus: ['Art pieces', 'Print pieces', 'Χρώμα & φόρμα', 'Interior architecture'],
+  focus: ['Art pieces', 'Print pieces', { el: 'Χρώμα & φόρμα', en: 'Colour & form' }, 'Interior architecture'],
 }
 
 export const wordmark = {

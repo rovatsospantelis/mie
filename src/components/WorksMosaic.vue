@@ -2,6 +2,9 @@
 import { ref, onMounted } from 'vue'
 import { RouterLink } from 'vue-router'
 import { works } from '@/config/content'
+import { useLang } from '@/composables/useLang'
+
+const { t, tr } = useLang()
 
 /**
  * WorksMosaic — alternating grid (κείμενο + φωτο), edge-to-edge.
@@ -16,12 +19,12 @@ const props = defineProps({
 // Πρότυπο διάταξης. type: 'text' | 'image'. Τα 'image' γεμίζουν τυχαία.
 // tint: a (cream) · b (coral απαλό) · c (coral solid)
 const pattern = [
-  { type: 'text', tint: 'a', label: 'Pure art', text: 'Αφηρημένες συνθέσεις σε χρώμα και υφή.', to: { path: '/works', query: { c: 'Pure art' } } },
+  { type: 'text', tint: 'a', label: 'Pure art', text: { el: 'Αφηρημένες συνθέσεις σε χρώμα και υφή.', en: 'Abstract compositions in colour and texture.' }, to: { path: '/works', query: { c: 'Pure art' } } },
   { type: 'image' },
   { type: 'image' },
-  { type: 'text', tint: 'b', label: 'Sketches', text: 'Έργα σε χαρτί — γραμμή, φόρμα και χρώμα.', to: { path: '/works', query: { c: 'Sketches' } } },
+  { type: 'text', tint: 'b', label: 'Sketches', text: { el: 'Έργα σε χαρτί — γραμμή, φόρμα και χρώμα.', en: 'Works on paper — line, form and colour.' }, to: { path: '/works', query: { c: 'Sketches' } } },
   { type: 'image' },
-  { type: 'text', tint: 'c', label: 'Δείτε όλα τα έργα', text: 'Pure art, sketches & items.', to: '/works' },
+  { type: 'text', tint: 'c', label: { el: 'Δείτε όλα τα έργα', en: 'View all works' }, text: 'Pure art, sketches & items.', to: '/works' },
   { type: 'image' },
   { type: 'image' },
 ]
@@ -79,14 +82,14 @@ onMounted(() => {
           'bg-accent text-white': cell.tint === 'c',
         }"
       >
-        <h3 class="font-display text-2xl md:text-3xl">{{ cell.label }}</h3>
+        <h3 class="font-display text-2xl md:text-3xl">{{ tr(cell.label) }}</h3>
         <p class="mt-3 max-w-[22ch] text-sm leading-relaxed"
            :class="cell.tint === 'c' ? 'text-white/85' : 'text-ink-soft'">
-          {{ cell.text }}
+          {{ tr(cell.text) }}
         </p>
         <span class="label mt-5 inline-block text-[11px]"
               :class="cell.tint === 'c' ? 'text-white' : 'text-accent-deep'">
-          Δείτε →
+          {{ t('common.see') }}
         </span>
       </div>
     </RouterLink>
