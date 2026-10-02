@@ -44,8 +44,20 @@ function setCategory(cat) {
 
 const isSoon = (cat) => comingSoon.categories.includes(cat)
 
+// «Όλα»: ανακατεμένα από όλες τις κατηγορίες — μία φορά ανά επίσκεψη,
+// ώστε η σειρά να μένει σταθερή όσο αλλάζεις φίλτρα / lightbox.
+function shuffle(arr) {
+  const a = [...arr]
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[a[i], a[j]] = [a[j], a[i]]
+  }
+  return a
+}
+const shuffledWorks = shuffle(works)
+
 const filtered = computed(() =>
-  active.value === 'Όλα' ? works : works.filter((w) => w.category === active.value)
+  active.value === 'Όλα' ? shuffledWorks : works.filter((w) => w.category === active.value)
 )
 
 // --- Lightbox ---
