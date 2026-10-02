@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mie.example/sitemap.xml
+Sitemap: https://mie-art.gr/sitemap.xml

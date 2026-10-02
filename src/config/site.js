@@ -14,14 +14,17 @@ export const site = {
   description:
     'mie — εικαστικό εργαστήριο της Μαρίνας Δούκα στην Αθήνα. Ζωγραφική, κεραμική, χαρτί και υφαντά. Δείτε επιλεγμένα έργα και συλλογές.',
   lang: 'el',
-  domain: 'https://mie.example', // χωρίς trailing slash
+  domain: 'https://mie-art.gr', // χωρίς trailing slash
 
   // --- Επικοινωνία ---
   contact: {
     mobile: '+30 697 821 0093',
     mobileRaw: '+306978210093',
     email: 'doyka.marina@gmail.com',
-    address: ''
+    address: '',
+    // Formspree endpoint της φόρμας επικοινωνίας (κενό = η φόρμα δείχνει μήνυμα ρύθμισης)
+    // formspree.io → New form → copy το URL, π.χ. 'https://formspree.io/f/abcdwxyz'
+    formEndpoint: 'https://formspree.io/f/xljdkqvz',
   },
 
   // --- Social (άσε κενό '' για να μην εμφανίζεται) ---

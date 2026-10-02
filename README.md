@@ -19,7 +19,7 @@ npm run preview
 ## Πού αλλάζεις τι
 | Θέλεις να αλλάξεις | Αρχείο |
 |---|---|
-| Όνομα, επικοινωνία, social, GA, feature flags | `src/config/site.js` |
+| Όνομα, επικοινωνία, Formspree endpoint, social, GA, feature flags | `src/config/site.js` |
 | **Έργα, hero slides, συλλογές, κείμενα** | `src/config/content.js` |
 | Παλέτα (light + dark) & fonts | `src/assets/main.css` (`@theme` / `html.dark`) + `index.html` |
 | Πλοήγηση (4 links → mobile tab bar) | `src/App.vue` → `navLinks` |
@@ -63,7 +63,7 @@ public/        art/ · icons · og-image · robots.txt · sitemap.xml · _redire
 Build `npm run build` · Publish `dist` · `public/_redirects` κάνει το SPA routing.
 
 ### Production checklist
-- [ ] `site.js`: domain, GA ID, στοιχεία επικοινωνίας
+- [ ] `site.js`: domain, GA ID, στοιχεία επικοινωνίας, `contact.formEndpoint` (Formspree)
 - [ ] Πραγματικά έργα/εικόνες + `content.js`
 - [ ] Logo → `python3 scripts/make_assets.py logo.png "#FCFBF8" "tagline"` (icons + OG)
 - [ ] Ξεσχόλιασε GA στο `index.html`

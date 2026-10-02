@@ -1,10 +1,10 @@
 <script setup>
 import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
+import { useRoute, useRouter, RouterLink } from 'vue-router'
 import { X, ChevronLeft, ChevronRight } from 'lucide-vue-next'
 import { site } from '@/config/site'
 import { usePageSeo } from '@/composables/useSeo'
-import { works, collections } from '@/config/content'
+import { works, collections, comingSoon } from '@/config/content'
 
 usePageSeo({
   title: `Έργα — ${site.name}`,
@@ -41,6 +41,8 @@ function setCategory(cat) {
     query: cat === 'Όλα' ? {} : { c: cat },
   })
 }
+
+const isSoon = (cat) => comingSoon.categories.includes(cat)
 
 const filtered = computed(() =>
   active.value === 'Όλα' ? works : works.filter((w) => w.category === active.value)
@@ -99,6 +101,17 @@ function onTouchEnd(e) {
         </button>
       </div>
 
+      <!-- Σημείωμα «σύντομα διαθέσιμα» για κατηγορίες σε preview -->
+      <div v-if="isSoon(active)" v-reveal
+           class="mx-auto mt-12 max-w-2xl border border-line bg-bg-soft px-6 py-8 text-center md:px-10">
+        <p class="label text-accent">{{ comingSoon.eyebrow }}</p>
+        <h2 class="mt-3 text-2xl md:text-3xl">{{ comingSoon.title }}</h2>
+        <p class="mt-4 leading-relaxed text-ink-soft">{{ comingSoon.text }}</p>
+        <RouterLink :to="comingSoon.cta.to" class="link-cta label mt-6 inline-block">
+          {{ comingSoon.cta.label }}
+        </RouterLink>
+      </div>
+
       <!-- Grid -->
       <div class="mt-12 grid grid-cols-2 gap-x-4 gap-y-8 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-3">
         <button
@@ -108,10 +121,14 @@ function onTouchEnd(e) {
           @click="show(i)"
           class="group text-left"
         >
-          <div class="overflow-hidden bg-bg-soft">
+          <div class="relative overflow-hidden bg-bg-soft">
             <img :src="w.image" :alt="w.title || w.category"
                  class="aspect-square w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
                  loading="lazy" />
+            <span v-if="isSoon(w.category)"
+                  class="label absolute left-3 top-3 bg-surface/90 px-2.5 py-1 text-[10px] text-accent-deep">
+              {{ comingSoon.badge }}
+            </span>
           </div>
           <div v-if="w.title || active === 'Όλα'" class="mt-3">
             <h3 v-if="w.title" class="text-xl">{{ w.title }}</h3>
@@ -150,7 +167,7 @@ function onTouchEnd(e) {
           <figcaption class="mt-4 text-white">
             <p v-if="cur.title" class="font-display text-2xl">{{ cur.title }}</p>
             <p class="label mt-1 text-xs text-white/70">
-              {{ cur.category }} · {{ idx + 1 }} / {{ filtered.length }}
+              {{ cur.category }}<template v-if="isSoon(cur.category)"> · {{ comingSoon.badge }}</template> · {{ idx + 1 }} / {{ filtered.length }}
             </p>
           </figcaption>
         </figure>

@@ -1,7 +1,9 @@
 <script setup>
 import { MapPin, Phone, Smartphone, Mail } from 'lucide-vue-next'
 import ContactForm from '@/components/ContactForm.vue'
+import { useRoute } from 'vue-router'
 import { site } from '@/config/site'
+import { comingSoon } from '@/config/content'
 import { usePageSeo } from '@/composables/useSeo'
 
 usePageSeo({
@@ -10,8 +12,8 @@ usePageSeo({
 })
 
 const c = site.contact
-// TODO: βάλε το Formspree endpoint σου εδώ
-const formEndpoint = ''
+// /contact?topic=items → έτοιμο μήνυμα ενδιαφέροντος για τη συλλογή
+const initialMessage = useRoute().query.topic === 'items' ? comingSoon.message : ''
 </script>
 
 <template>
@@ -50,7 +52,7 @@ const formEndpoint = ''
 
       <!-- Form -->
       <div v-if="site.features.contactForm" v-reveal="1">
-        <ContactForm :endpoint="formEndpoint" />
+        <ContactForm :endpoint="c.formEndpoint" :initial-message="initialMessage" />
       </div>
     </div>
   </section>

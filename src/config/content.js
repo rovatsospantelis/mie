@@ -46,13 +46,27 @@ export const heroSlides = [
   },
 ]
 
+// --- «Σύντομα διαθέσιμα» ---
+// Κατηγορίες που δείχνονται ως preview (σήμα «Σύντομα» + σημείωμα στη σελίδα Έργα).
+// Όταν τα Items βγουν προς πώληση: άδειασε το categories → [] και άλλαξε το feature πιο κάτω.
+export const comingSoon = {
+  categories: ['Items'],
+  badge: 'Σύντομα',
+  eyebrow: 'Νέα συλλογή · Σύντομα διαθέσιμη',
+  title: 'Τα αντικείμενα ετοιμάζονται',
+  text: 'Τα κομμάτια που βλέπετε είναι μια πρώτη ματιά στη συλλογή, που ολοκληρώνεται αυτή την περίοδο στο εργαστήριο. Θέλετε να μάθετε πρώτοι πότε θα είναι διαθέσιμα ή να κρατήσετε κάποιο;',
+  cta: { label: 'Ενημερωθείτε πρώτοι', to: { path: '/contact', query: { topic: 'items' } } },
+  // προσυμπληρωμένο μήνυμα στη φόρμα όταν έρχονται από το παραπάνω CTA
+  message: 'Γεια σας! Θα ήθελα να ενημερωθώ όταν η συλλογή αντικειμένων είναι διαθέσιμη.',
+}
+
 // --- Feature banner ---
 export const feature = {
   image: '/works/items/items-02.png',
-  eyebrow: 'Items',
+  eyebrow: 'Items · Σύντομα',
   title: 'Η Τέχνη γίνεται αντικείμενο',
-  text: 'Έργα τέχνης γίνονται χρηστικά αντικείμενα.',
-  cta: { label: 'Δείτε τα αντικείμενα', to: { path: '/works', query: { c: 'Items' } } },
+  text: 'Έργα τέχνης γίνονται χρηστικά αντικείμενα. Η συλλογή ολοκληρώνεται στο εργαστήριο — δείτε μια πρώτη ματιά.',
+  cta: { label: 'Μια πρώτη ματιά', to: { path: '/works', query: { c: 'Items' } } },
 }
 
 // --- Συλλογές / υπο-κατηγορίες (τα 3 υπο-tabs των Έργων) ---
@@ -149,7 +163,7 @@ export const works = [
 // --- Editorial 3-up ---
 export const editorial = [
   { title: 'Sketches', label: 'Έργα σε χαρτί', image: '/works/sketches/sketches-23.jpg', to: { path: '/works', query: { c: 'Sketches' } } },
-  { title: 'Items', label: 'Αντικείμενα & prints', image: '/works/items/items-11.png', to: { path: '/works', query: { c: 'Items' } } },
+  { title: 'Items', label: 'Αντικείμενα · Σύντομα', image: '/works/items/items-11.png', to: { path: '/works', query: { c: 'Items' } } },
   { title: 'Pure art', label: 'Πίνακες', image: '/works/pure/pure-03.jpg', to: { path: '/works', query: { c: 'Pure art' } } },
 ]
 

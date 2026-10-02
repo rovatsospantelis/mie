@@ -2,35 +2,45 @@
 import { ref } from 'vue'
 import { Send, Check } from 'lucide-vue-next'
 import { trackContact } from '@/utils/track'
+import { site } from '@/config/site'
 
 /**
- * ContactForm — φόρμα επικοινωνίας για lead generation.
+ * ContactForm — φόρμα επικοινωνίας μέσω Formspree.
  *
  * ΣΤΗΣΙΜΟ (μία φορά ανά project):
- * 1) Φτιάξε δωρεάν λογαριασμό στο https://formspree.io
- * 2) Νέα φόρμα → πάρε το endpoint (https://formspree.io/f/XXXX)
- * 3) Βάλ' το στο prop `endpoint` ή στο config
+ * 1) Λογαριασμός στο https://formspree.io (με το email που θα λαμβάνει τα μηνύματα)
+ * 2) New form → πάρε το endpoint (https://formspree.io/f/XXXX)
+ * 3) Βάλ' το στο `contact.formEndpoint` του src/config/site.js
  *
- * Εναλλακτικά: Netlify Forms (πρόσθεσε netlify σε <form> — δες docs)
+ * Spam: το κρυφό πεδίο `_gotcha` (honeypot) — αν το γεμίσει bot, το Formspree το απορρίπτει σιωπηλά.
  */
 const props = defineProps({
   endpoint: { type: String, default: '' }, // Formspree URL
+  initialMessage: { type: String, default: '' }, // προσυμπλήρωση μηνύματος (π.χ. από «Ενημερωθείτε πρώτοι»)
 })
 
-const form = ref({ name: '', email: '', phone: '', message: '' })
+const empty = () => ({ name: '', email: '', phone: '', message: '', _gotcha: '' })
+const form = ref({ ...empty(), message: props.initialMessage })
 const status = ref('idle') // idle | sending | success | error
 const errorMsg = ref('')
 
+const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+function fail(msg) {
+  errorMsg.value = msg
+  status.value = 'error'
+}
+
 async function submit() {
-  if (!form.value.name || !form.value.email || !form.value.message) {
-    errorMsg.value = 'Συμπλήρωσε όνομα, email και μήνυμα.'
-    status.value = 'error'
-    return
+  const f = form.value
+  if (!f.name.trim() || !f.email.trim() || !f.message.trim()) {
+    return fail('Συμπλήρωσε όνομα, email και μήνυμα.')
+  }
+  if (!emailRe.test(f.email.trim())) {
+    return fail('Το email δεν φαίνεται σωστό.')
   }
   if (!props.endpoint) {
-    errorMsg.value = 'Η φόρμα δεν έχει ρυθμιστεί ακόμα (λείπει endpoint).'
-    status.value = 'error'
-    return
+    return fail('Η φόρμα δεν έχει ρυθμιστεί ακόμα (λείπει endpoint).')
   }
 
   status.value = 'sending'
@@ -38,24 +48,32 @@ async function submit() {
     const res = await fetch(props.endpoint, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-      body: JSON.stringify(form.value),
+      body: JSON.stringify({
+        name: f.name.trim(),
+        email: f.email.trim(),
+        phone: f.phone.trim(),
+        message: f.message.trim(),
+        _gotcha: f._gotcha,
+        _subject: `Νέο μήνυμα από ${f.name.trim()} — ${site.name}`,
+      }),
     })
     if (res.ok) {
       status.value = 'success'
       trackContact('form', 'contact_page')
-      form.value = { name: '', email: '', phone: '', message: '' }
-    } else {
-      throw new Error('bad response')
+      form.value = empty()
+      return
     }
+    const data = await res.json().catch(() => ({}))
+    const detail = data.errors?.map((e) => e.message).join(' ')
+    fail(detail || 'Κάτι πήγε στραβά. Δοκίμασε ξανά ή στείλε email απευθείας.')
   } catch (e) {
-    errorMsg.value = 'Κάτι πήγε στραβά. Δοκίμασε ξανά ή στείλε email απευθείας.'
-    status.value = 'error'
+    fail('Δεν ήταν δυνατή η αποστολή. Έλεγξε τη σύνδεσή σου ή στείλε email απευθείας.')
   }
 }
 </script>
 
 <template>
-  <div v-if="status === 'success'" class="rounded-2xl border border-line bg-bg-soft p-10 text-center">
+  <div v-if="status === 'success'" class="rounded-2xl border border-line bg-bg-soft p-10 text-center" role="status">
     <span class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-accent/10 text-accent-deep">
       <Check :size="28" :stroke-width="2" />
     </span>
@@ -63,36 +81,40 @@ async function submit() {
     <p class="mt-2 text-ink-soft">Θα επικοινωνήσουμε μαζί σου σύντομα.</p>
   </div>
 
-  <div v-else class="space-y-4">
+  <form v-else class="space-y-4" novalidate @submit.prevent="submit">
     <div class="grid gap-4 sm:grid-cols-2">
       <div>
-        <label class="text-sm font-medium">Όνομα *</label>
-        <input v-model="form.name" type="text"
+        <label for="cf-name" class="text-sm font-medium">Όνομα *</label>
+        <input id="cf-name" v-model="form.name" type="text" name="name" autocomplete="name" required
           class="mt-1.5 w-full rounded-xl border border-line bg-surface px-4 py-3 text-ink outline-none transition-colors focus:border-accent-deep" />
       </div>
       <div>
-        <label class="text-sm font-medium">Email *</label>
-        <input v-model="form.email" type="email"
+        <label for="cf-email" class="text-sm font-medium">Email *</label>
+        <input id="cf-email" v-model="form.email" type="email" name="email" autocomplete="email" required
           class="mt-1.5 w-full rounded-xl border border-line bg-surface px-4 py-3 text-ink outline-none transition-colors focus:border-accent-deep" />
       </div>
     </div>
     <div>
-      <label class="text-sm font-medium">Τηλέφωνο</label>
-      <input v-model="form.phone" type="tel"
+      <label for="cf-phone" class="text-sm font-medium">Τηλέφωνο</label>
+      <input id="cf-phone" v-model="form.phone" type="tel" name="phone" autocomplete="tel"
         class="mt-1.5 w-full rounded-xl border border-line bg-surface px-4 py-3 text-ink outline-none transition-colors focus:border-accent-deep" />
     </div>
     <div>
-      <label class="text-sm font-medium">Μήνυμα *</label>
-      <textarea v-model="form.message" rows="5"
+      <label for="cf-message" class="text-sm font-medium">Μήνυμα *</label>
+      <textarea id="cf-message" v-model="form.message" name="message" rows="5" required
         class="mt-1.5 w-full rounded-xl border border-line bg-surface px-4 py-3 text-ink outline-none transition-colors focus:border-accent-deep"></textarea>
     </div>
 
-    <p v-if="status === 'error'" class="text-sm text-red-500">{{ errorMsg }}</p>
+    <!-- Honeypot: κρυφό από ανθρώπους, τα bots το γεμίζουν -->
+    <input v-model="form._gotcha" type="text" name="_gotcha" tabindex="-1" autocomplete="off"
+      aria-hidden="true" class="hidden" />
 
-    <button @click="submit" :disabled="status === 'sending'"
+    <p v-if="status === 'error'" class="text-sm text-red-500" role="alert">{{ errorMsg }}</p>
+
+    <button type="submit" :disabled="status === 'sending'"
       class="btn btn-solid w-full sm:w-auto">
       <Send :size="18" :stroke-width="1.8" />
       {{ status === 'sending' ? 'Αποστολή…' : 'Στείλε μήνυμα' }}
     </button>
-  </div>
+  </form>
 </template>
