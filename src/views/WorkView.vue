@@ -59,6 +59,14 @@ const filtered = computed(() =>
   active.value === ALL ? shuffledWorks : works.filter((w) => w.category === active.value)
 )
 
+// Μικρογραφία για το grid (scripts/make_thumbs.py):
+// /works/pure/pure-11.png → /works/pure/thumbs/pure-11.webp
+const thumb = (src) => src.replace(/\/([^/]+)\.\w+$/, '/thumbs/$1.webp')
+// Αν λείπει η μικρογραφία (νέο έργο χωρίς script), πέφτουμε στο αυθεντικό
+function onThumbError(e, src) {
+  if (e.target.src.endsWith('.webp')) e.target.src = src
+}
+
 // --- Lightbox ---
 const idx = ref(-1)
 const open = computed(() => idx.value >= 0)
@@ -133,9 +141,10 @@ function onTouchEnd(e) {
           class="group text-left"
         >
           <div class="relative overflow-hidden bg-bg-soft">
-            <img :src="w.image" :alt="w.title || w.category"
+            <img :src="thumb(w.image)" :alt="w.title || w.category"
                  class="aspect-square w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-                 loading="lazy" />
+                 width="800" height="800" loading="lazy" decoding="async"
+                 @error="onThumbError($event, w.image)" />
             <span v-if="isSoon(w.category)"
                   class="label absolute left-3 top-3 bg-surface/90 px-2.5 py-1 text-[10px] text-accent-deep">
               {{ tr(comingSoon.badge) }}

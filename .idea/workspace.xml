@@ -4,9 +4,93 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde2a5fa-9c4e-4e2c-8d17-4c456fc7985c" name="Changes" comment="-EL/ENG language toggle">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/content.js" afterDir="false" />
+    <list default="true" id="bde2a5fa-9c4e-4e2c-8d17-4c456fc7985c" name="Changes" comment="-pure art addition">
+      <change afterPath="$PROJECT_DIR$/public/works/items/thumbs/items-01.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/items/thumbs/items-02.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/items/thumbs/items-03.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/items/thumbs/items-04.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/items/thumbs/items-05.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/items/thumbs/items-07.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/items/thumbs/items-08.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/items/thumbs/items-09.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/items/thumbs/items-10.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/items/thumbs/items-11.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/items/thumbs/items-12.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/items/thumbs/items-13.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/items/thumbs/items-14.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/items/thumbs/items-15.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/items/thumbs/items-16.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/items/thumbs/items-17.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/items/thumbs/items-18.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/items/thumbs/items-19.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/items/thumbs/items-20.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/pure/thumbs/pure-01.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/pure/thumbs/pure-02.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/pure/thumbs/pure-03.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/pure/thumbs/pure-04.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/pure/thumbs/pure-05.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/pure/thumbs/pure-06.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/pure/thumbs/pure-07.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/pure/thumbs/pure-08.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/pure/thumbs/pure-09.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/pure/thumbs/pure-10.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/pure/thumbs/pure-11.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/pure/thumbs/pure-12.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/pure/thumbs/pure-13.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/pure/thumbs/pure-14.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/pure/thumbs/pure-15.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/pure/thumbs/pure-16.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/pure/thumbs/pure-17.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/pure/thumbs/pure-18.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/pure/thumbs/pure-19.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/pure/thumbs/pure-20.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/pure/thumbs/pure-21.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/pure/thumbs/pure-22.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/pure/thumbs/pure-23.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/pure/thumbs/pure-24.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/pure/thumbs/pure-25.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/pure/thumbs/pure-26.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/pure/thumbs/pure-27.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-04.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-05.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-09.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-11.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-12.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-14.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-15.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-16.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-17.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-18.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-19.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-20.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-21.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-22.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-23.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-24.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-25.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-26.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-27.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-28.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-29.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-30.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-31.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-32.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-33.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-34.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-35.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-36.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-37.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-38.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-39.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-40.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-41.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-42.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-44.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-45.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-46.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/works/sketches/thumbs/sketches-47.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/make_thumbs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/WorkView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/WorkView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +221,7 @@
       <workItem from="1790587548586" duration="504000" />
       <workItem from="1790597708574" duration="3307000" />
       <workItem from="1790925451400" duration="4643000" />
-      <workItem from="1792664378026" duration="300000" />
+      <workItem from="1792664378026" duration="605000" />
     </task>
     <task id="LOCAL-00001" summary="-Pictures update">
       <option name="closed" value="true" />
@@ -371,7 +455,15 @@
       <option name="project" value="LOCAL" />
       <updated>1790928412551</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="-pure art addition">
+      <option name="closed" value="true" />
+      <created>1792664806049</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1792664806049</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,6 +498,7 @@
     <MESSAGE value="-Items soon, formspree, logo expansion" />
     <MESSAGE value="-WorkView updated to shuffle" />
     <MESSAGE value="-EL/ENG language toggle" />
-    <option name="LAST_COMMIT_MESSAGE" value="-EL/ENG language toggle" />
+    <MESSAGE value="-pure art addition" />
+    <option name="LAST_COMMIT_MESSAGE" value="-pure art addition" />
   </component>
 </project>
