@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde2a5fa-9c4e-4e2c-8d17-4c456fc7985c" name="Changes" comment="-WorkView updated to shuffle">
+    <list default="true" id="bde2a5fa-9c4e-4e2c-8d17-4c456fc7985c" name="Changes" comment="-EL/ENG language toggle">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/content.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -13,7 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="146" />
+    <option name="cachedIndexableFilesCount" value="158" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Settings">
@@ -135,7 +136,8 @@
       <workItem from="1785581174445" duration="1269000" />
       <workItem from="1790587548586" duration="504000" />
       <workItem from="1790597708574" duration="3307000" />
-      <workItem from="1790925451400" duration="2717000" />
+      <workItem from="1790925451400" duration="4643000" />
+      <workItem from="1792664378026" duration="300000" />
     </task>
     <task id="LOCAL-00001" summary="-Pictures update">
       <option name="closed" value="true" />
@@ -361,7 +363,15 @@
       <option name="project" value="LOCAL" />
       <updated>1790927482038</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="-EL/ENG language toggle">
+      <option name="closed" value="true" />
+      <created>1790928412551</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1790928412551</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,6 +405,7 @@
     <MESSAGE value="-Logo update" />
     <MESSAGE value="-Items soon, formspree, logo expansion" />
     <MESSAGE value="-WorkView updated to shuffle" />
-    <option name="LAST_COMMIT_MESSAGE" value="-WorkView updated to shuffle" />
+    <MESSAGE value="-EL/ENG language toggle" />
+    <option name="LAST_COMMIT_MESSAGE" value="-EL/ENG language toggle" />
   </component>
 </project>

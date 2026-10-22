@@ -168,7 +168,9 @@ export const works = [
   { category: 'Pure art', image: '/works/pure/pure-22.png' },
   { category: 'Pure art', image: '/works/pure/pure-23.png' },
   { category: 'Pure art', image: '/works/pure/pure-24.png' },
-  { category: 'Pure art', image: '/works/pure/pure-25.png' }
+  { category: 'Pure art', image: '/works/pure/pure-25.png' },
+  { category: 'Pure art', image: '/works/pure/pure-26.png' },
+  { category: 'Pure art', image: '/works/pure/pure-27.png' }
 ]
 
 // --- Editorial 3-up ---
